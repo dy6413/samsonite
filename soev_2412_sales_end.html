@@ -1,0 +1,55 @@
+<style type="text/css">
+    .contents_wrap{
+        position: relative;
+        width: 100%;
+        max-width: 1310px;
+        margin: 0 auto;        
+    }
+    .contents_wrap img{width:100%; display:block;}
+</style>
+
+<div class="contents_wrap">
+    <picture>
+        <source data-device="mobile" srcset="images/promotion/2024/1203_SALES/mo_soev_2412_sales_end.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="images/promotion/2024/1203_SALES/pc_soev_2412_sales_end.jpg?$staticlink$" alt=""/>  
+    </picture>   
+</div>
+
+
+
+
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // 이미지와 source 태그의 srcset 변환
+        const images = document.querySelectorAll('img');
+        const sources = document.querySelectorAll('source');
+
+        images.forEach((img) => {
+            if (img.src && img.src.includes('images/promotion')) {
+                img.src = 'https://stgsskr.globeesoftware.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dwb6cd4553/images/promotion/' + img.src.split('images/promotion')[1];
+            }
+        });
+
+        sources.forEach((source) => {
+            // source의 data-device 속성 변환 (srcset)
+            if (source.srcset && source.srcset.includes('images/promotion')) {
+                source.srcset = 'https://stgsskr.globeesoftware.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dwb6cd4553/images/promotion/' + source.srcset.split('images/promotion')[1];
+            }
+            
+            // data-device 속성도 수정 (필요한 경우)
+            if (source.dataset.device && source.dataset.device === 'mobile') {
+                // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+                source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+            }
+        });
+    });
+
+
+    source.srcset.split(',').forEach((path, index) => {
+        if (path.includes('images/promotion')) {
+            source.srcset = source.srcset.replace(path, 'https://stgsskr.globeesoftware.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dwb6cd4553/images/promotion/' + path.split('images/promotion')[1]);
+        }
+    });
+</script>
