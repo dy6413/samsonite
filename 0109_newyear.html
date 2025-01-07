@@ -1,0 +1,206 @@
+<style type="text/css">
+	.pc{display:block;}	
+	.mo{display:none;}
+	body{margin:0;}
+    .contents_wrap{
+        position: relative;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;        
+    }
+    .contents_wrap img{width:100%; display:block;}
+	.contents_rel{position: relative;}
+	.contents_rel .link{display: block; position: absolute; font-size:0; text-indent: -9999px; overflow: hidden;}
+	.contents02 .link01{top: 43%; left: 17%; width: 19%; height: 6%;}
+	.contents02 .link02{top: 43%; left: 41%; width: 19%; height: 6%;}
+	.contents02 .link03{top: 43%; left: 64%; width: 19%; height: 6%;}
+
+	.contents03 .link01{top: 78%; left: 26.5%; width: 15%; height: 13%;}
+	.contents03 .link02{top: 78%; left: 58.5%; width: 15%; height: 13%;}
+
+	.contents07 .link01{top: 46%; left: 23%; width: 15%; height: 9%;}
+	.contents07 .link02{top: 28%; left: 41%; width: 15%; height: 10%;}
+	.contents07 .link03{top: 52%; left: 46%; width: 19%; height: 8%;}
+	.contents07 .link04{top: 76%; left: 60%; width: 17%; height: 9%;}
+
+	@media(max-width:767px) {
+		.pc{display:none;}		
+		.mo{display:block;}	
+		.contents_wrap{
+			max-width:100%;
+		}
+		.contents02 .link01{top: 88%; left: 5%; width: 25%; height: 8%;}
+		.contents02 .link02{top: 88%; left: 38%; width: 25%; height: 8%;}
+		.contents02 .link03{top: 88%; left: 71%; width: 25%; height: 8%;}
+
+		.contents03 .link01{top: 45%; left: 26.5%; width: 47%; height: 8%;}
+		.contents03 .link02{top: 85%; left: 26.5%; width: 47%; height: 8%;}
+
+		.contents07 .link01{top: 57%; left: 10%; width: 43%; height: 10%;}
+		.contents07 .link02{top: 21%; left: 47%; width: 43%; height: 10%;}
+		.contents07 .link03{top: 44%; left: 9%; width: 50%; height: 6.5%;}
+		.contents07 .link04{top: 81%; left: 47%; width: 47%; height: 10%;}
+	}
+</style>
+
+<script>
+	// 카카오톡 채널 추가하기
+	Kakao.Channel.addChannel({
+		channelPublicId: '_NzvkK'
+	});
+	// 카카오톡 채널 관계 확인하기
+	Kakao.API.request({
+        url: '/v1/api/talk/channels',
+	})
+	.then(function(response) {
+		console.log(response);
+	})
+	.catch(function(error) {
+		console.log(error);
+	});
+</script>
+
+<div class="contents_wrap">
+	<div class="contents_rel contents01">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/01_mo.jpg" media="(max-width: 767px)">
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/01_pc.jpg" alt="NEW YEAR, NEW TRAVEL!"/>
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents02">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/02_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/02_pc.jpg" alt="NEW TRAVEL 혜택1 2025년 새해 첫 여행은 아메리칸 투어리스터와 준비하세요"/>
+		</picture>   
+		<a href="$url('Product-Show','pid','at-152491-1259')$" class="link link01">캐리어 바로가기</a>
+		<a href="$url('Product-Show','pid','at-152491-1259')$" class="link link02">백팩 바로가기</a>
+		<a href="$url('Product-Show','pid','at-152491-1259')$"  class="link link03">가방 바로가기</a>
+	</div>
+	
+	<div class="contents_rel contents03">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/03_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/03_pc.jpg" alt="할인 더하기 쿠폰 2종 할인 쿠폰혜택 신규 회원 전용 10%, 아메리칸 투어리스터 공식 계정 플친 전용 5% / 추가 포인트 적립 혜택 결제 시 즉시 사용 가능한 공식몰 포인트 2% 적립, 네이버 페이로 결제 시, 
+			결제금액 기준 최대 2% 추가 적립 / NOTICE - 카톡플친 전용 쿠폰은 마이페이지-쿠폰현황-쿠폰등록 후 사용 가능합니다."/>
+		</picture>   
+		<a href="https://www.americantourister.co.kr/register" class="link link01">회원 가입 하러가기</a>
+		<a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" target="_blank" title="새 창" class="link link02">카카오 플러스 채널추가</a>
+	</div>
+
+	<div class="contents_rel contents04">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/04_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/04_pc.jpg" alt="NEW TRAVEL 혜택2 코닥 일회용 카메라 소중한 여행의 추억을 기록해 보세요, 증정 대상 : 주문 건당 결제 금액이 30만원 이상인 고객 대상으로 선착순 증정, 제공 내용: 코닥 펀세이버 일회용 카메라(27컷 촬영 가능), notice 제품 수령후 교환/ 반품 기한(7일) 경과 후 별도 택배 발송됩니다. 사은품 재고 소진 시 사전 공지 없이 종료될 수 있습니다 이해를 돕기 위한 예시 이미지로 제품의 실물과 다를 수 있습니다."/>
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents05">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/05_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/05_pc.jpg" alt="NEW TRAVEL 혜택3 10만원 스페셜 쿠폰 더많은 아메리칸 투어리스터 제품을 경험해보세요. 증정 대상: 기획전 기간 내 줌누한 고객님 중 10명 선정, 제공 내용: 공식몰에서 제품 구매 시 사용 가능한 10만원 할인 쿠폰, notice 당첨자에 한하여 고객센터를 통해 쿠폰번호 및 사용법 2월 중 별도 안내 예정"/>
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents06">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/06_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/06_pc.jpg" alt="NEW TRAVEL 혜택 4 추가 포인트 적립 혜택 결제 시 즉시 사용 가능한 공식몰 포인트 2% 적립, 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립 /" />
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents07">
+		<picture>
+			<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/07_mo.jpg" media="(max-width: 767px)" >
+			<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/07_pc.jpg" alt="RECOMMENDED ITEMS 여행을 더 빛내줄 악세서리 추천템!"/>
+		</picture>  
+		<a href="$url('Product-Show','pid','at-61775-1596')$" class="link link01">캐리어 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-55139-1582')$" class="link link02">5종 파우치 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-87343-1596')$" class="link link03">메모리폼 목베개 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-38849-8688')$" class="link link04">캐리어 스트랩 바로가기</a>
+	</div>
+
+	<div class="contents_rel contents_all">
+		<a href="$url('Search-Show','cgid','atev_2306_review')$">
+			<picture>
+				<source data-device="mobile" srcset="http://santelglobal.speedgabia.com/samso/at/0109_newyear/08_mo.jpg" media="(max-width: 767px)"  alt="REVIEW EVENT">
+				<img src="http://santelglobal.speedgabia.com/samso/at/0109_newyear/08_pc.jpg" alt="REVIEW EVENT"/>
+			</picture>   
+		</a>
+	</div>
+</div>
+
+<!--변환-->
+<div class="contents_wrap">
+	<div class="contents_rel contents01">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/01_mo.jpg?$staticlink$" media="(max-width: 767px)">
+			<img src="Promotions/2025/0109_New_Year/01_pc.jpg?$staticlink$" alt="NEW YEAR, NEW TRAVEL!"/>			
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents02">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/02_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/02_pc.jpg?$staticlink$" alt="NEW TRAVEL 혜택1 2025년 새해 첫 여행은 아메리칸 투어리스터와 준비하세요"/>
+		</picture>   
+		<a href="">
+		<a href="$url('Search-Show','cgid','luggage')$" class="link link01">캐리어 바로가기</a>
+		<a href="$url('Search-Show','cgid','backpack')$" class="link link02">백팩 바로가기</a>
+		<a href="$url('Search-Show','cgid','bag')$"  class="link link03">가방 바로가기</a>
+	</div>
+	<div class="contents_rel contents03">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/03_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/03_pc.jpg?$staticlink$" alt="할인 더하기 쿠폰 2종 할인 쿠폰혜택 신규 회원 전용 10%, 아메리칸 투어리스터 공식 계정 플친 전용 5% / 추가 포인트 적립 혜택 결제 시 즉시 사용 가능한 공식몰 포인트 2% 적립, 네이버 페이로 결제 시, 
+			결제금액 기준 최대 2% 추가 적립 / NOTICE - 카톡플친 전용 쿠폰은 마이페이지-쿠폰현황-쿠폰등록 후 사용 가능합니다."/>
+		</picture>   
+		<a href="https://www.americantourister.co.kr/register" class="link link01">회원 가입 하러가기</a>
+		<a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" target="_blank" title="새 창" class="link link02">카카오 플러스 채널추가</a>
+	</div>
+
+	<div class="contents_rel contents04">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/04_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/04_pc.jpg?$staticlink$" alt="NEW TRAVEL 혜택2 코닥 일회용 카메라 소중한 여행의 추억을 기록해 보세요, 증정 대상 : 주문 건당 결제 금액이 30만원 이상인 고객 대상으로 선착순 증정, 제공 내용: 코닥 펀세이버 일회용 카메라(27컷 촬영 가능), notice 제품 수령후 교환/ 반품 기한(7일) 경과 후 별도 택배 발송됩니다. 사은품 재고 소진 시 사전 공지 없이 종료될 수 있습니다 이해를 돕기 위한 예시 이미지로 제품의 실물과 다를 수 있습니다."/>
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents05">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/05_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/05_pc.jpg?$staticlink$" alt="NEW TRAVEL 혜택3 10만원 스페셜 쿠폰 더많은 아메리칸 투어리스터 제품을 경험해보세요. 증정 대상: 기획전 기간 내 줌누한 고객님 중 10명 선정, 제공 내용: 공식몰에서 제품 구매 시 사용 가능한 10만원 할인 쿠폰, notice 당첨자에 한하여 고객센터를 통해 쿠폰번호 및 사용법 2월 중 별도 안내 예정"/>
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents06">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/06_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/06_pc.jpg?$staticlink$" alt="NEW TRAVEL 혜택 4 추가 포인트 적립 혜택 결제 시 즉시 사용 가능한 공식몰 포인트 2% 적립, 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립 /" />
+		</picture>   
+	</div>
+
+	<div class="contents_rel contents07">
+		<picture>
+			<source data-device="mobile" srcset="Promotions/2025/0109_New_Year/07_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+			<img src="Promotions/2025/0109_New_Year/07_pc.jpg?$staticlink$" alt="RECOMMENDED ITEMS 여행을 더 빛내줄 악세서리 추천템!"/>
+		</picture>  
+		<a href="$url('Product-Show','pid','at-61775-1596')$" class="link link01">캐리어 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-55139-1582')$" class="link link02">5종 파우치 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-87343-1596')$" class="link link03">메모리폼 목베개 커버 바로가기</a>
+		<a href="$url('Product-Show','pid','at-38849-8688')$" class="link link04">캐리어 스트랩 바로가기</a>
+	</div>
+
+	<div class="contents_rel contents_all">
+		<a href="$url('Search-Show','cgid','atev_2306_review')$">
+			<picture>
+				<source data-device="mobile" srcset="Promotions/00_footer/2501_footer_mo.jpg?$staticlink$" media="(max-width: 767px)"  alt="REVIEW EVENT">
+				<img src="Promotions/00_footer/2501_footer_pc.jpg?$staticlink$" alt="REVIEW EVENT"/>
+			</picture>   
+		</a>
+	</div>
+</div>
+
+
+
+
