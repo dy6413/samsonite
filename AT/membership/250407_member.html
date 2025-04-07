@@ -1,0 +1,661 @@
+<style type="text/css">.breadcrumbs-wrapper {display: none;}
+	.promotion-head.container {display: none;}
+	.mobile-hidden .conts-wrap {position: relative; width: 100%;}
+	.desktop-hidden .conts-wrap {position: relative; margin: 0 auto;}
+	.conts-wrap img {width: 100%;}
+	.conts-wrap .hasmap-wrap {position: relative; display: block;}
+	.conts-wrap .hasmap-wrap a {display: block; text-indent: -9999px; font-size: 0; overflow: hidden;	background: rgba(0, 0, 0, 0);}
+	.tab-wrap {position: relative; padding: 70px 3vw; margin: 0 7vw; border-radius: 40px; background: #d31440;}
+	.tab-wrap .text {margin: 0; color: #fff; font-size: 30px; text-align: center; word-break: keep-all; line-height: 1.4;}
+	.tab-menu {display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; padding: 0 30px; margin: 60px 0 40px; list-style: none;}
+	.tab-menu li {width: calc(50% - 32px); height: 56px; border: 1px solid #fff; border-radius: 30px;}
+	.tab-menu li a {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; color: #fff; font-size: 30px; font-weight: 700; text-decoration: none; line-height: 1;}
+	.tab-menu li.on {background-color: #fff;}
+	.tab-menu li.on a {color: #d31440;}
+ 	.tab-cont-wrap {padding: 85px 3vw; border-radius: 40px; background: #fff; }
+ 	.tab-cont-wrap .tab-cont {display: none;}
+ 	.tab-cont-wrap .tab-cont.active {display: block;}
+ 	/* .tab-cont-wrap .tab-cont img {border-radius: 40px;} */
+	.member-wrap {display: flex; gap: 40px}
+	.member-wrap .member-info {flex-shrink: 1;}
+	.member-wrap .member-info .name {margin-top: 40px; font-size: 30px; font-weight: 700; text-align: center;}
+	.member-wrap .member-info.insider .name {color: #3401b5;}
+	.member-wrap .member-info.elite .name {color: #f7a501;}
+	.member-wrap .member-info.star .name {color: #ee7a49;}
+	.member-wrap .member-info.icon .name {color: #00813d;}
+	.member-wrap .member-info .name span:not(.fa) {padding-left: 36px; font-size: 36px;}
+	.member-wrap .member-info .name p {margin: 0; margin-top: 6px; font-size: 24px;}
+	.member-wrap .member-benefit-wrap {width: 100%;}
+	.member-wrap .member-benefit {display: flex; min-height: 128px; border-top: 1px solid #aeaeb0; border-bottom: 1px solid #aeaeb0;}
+	.member-wrap .member-benefit+.member-benefit {border-top: 0;}
+	.member-wrap .member-benefit .name {display: flex; align-items: center; justify-content: space-between; width: 55%; padding-right: 30px; border-right: 1px solid #aeaeb0;}
+	.member-wrap .member-benefit .name span:not(.sa-icon) {font-size: 24px;}
+	.member-wrap .member-benefit .value {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 45%; gap: 10px;}
+	.member-wrap .member-benefit .value span:not(.sa-icon) {font-size: 16px;}
+	.member-wrap .member-benefit .value span.sa-icon.icon-ico-apply {border: 1px solid #d21646; background-color: #fff; border-radius: 50%; font-size: 35px;}
+	.member-wrap .member-benefit .value span.sa-icon.icon-ico-apply:before {color: #d21646;}
+	/* Tooltip */
+	.fa-question-circle {position: relative; display: inline-block; font-size: 30px;}
+	.fa-question-circle:before {color: #9d9fa2;}
+	.fa-question-circle .tooltiptext {visibility: hidden; min-width: 150px; background-color: white; color: #000; text-align: center; padding: 10px; position: absolute; z-index: 1; border: 1px solid #000; bottom: 0; transform: translateY(-25%); left: 0;}
+	.fa-question-circle:hover .tooltiptext {visibility: visible;}
+	.tooltip-explanations {position: relative; display: inline-block; opacity: 1}
+	.tooltip-explanations .tooltip-text {visibility: visible; position: absolute; left: -172px; bottom: 148%; min-width: 250px; padding: 10px !important; border: 1px solid #d9d9d9; border-radius: 0; background-color: #fff; color: #000; font-family: 'Pretendard'; font-size: 14px !important; font-weight: 400 !important; text-align: left; line-height: 1.2; opacity: 0; z-index: 9999; transition: opacity .5s; text-transform: none; pointer-events: none; word-break: keep-all;}
+	.tooltip-explanations .tooltip-text:before {content: ""; position: absolute; bottom: -20px; right: 53px; left: auto; border: 10px solid transparent; border-top-color: #d9d9d9}
+	.tooltip-explanations .tooltip-text:after {content: ""; position: absolute; bottom: -16px; right: 55px; left: auto; border: 8px solid transparent; border-top-color: #fff}
+	.tooltip-explanations:hover {cursor: pointer}
+	.tooltip-explanations:hover .tooltip-text {visibility: visible; opacity: 1}
+	.tooltip-explanations .explanation-link {display: block; text-decoration: underline; transition: opacity .5s}
+	.btn-wrap {margin-top: -40px;}
+	.notice-wrap {padding: 0 4vw; margin-top: 60px; color:#fff;}
+	.notice-wrap .title {margin: 0; margin-bottom: 20px; font-size: 28px; font-weight: 700;}
+	.notice-wrap ul {padding-left: 0; margin: 0; list-style: none;}
+	.notice-wrap ul li {position: relative; padding-left: 8px; font-size: 20px; word-break: keep-all; line-height: 1.4; letter-spacing: -0.05em;}
+	.notice-wrap ul li+li {margin-top: 8px;}
+	.notice-wrap ul li:before {content: '·'; position: absolute; top: 0; left: 0;}
+
+	@media screen and (min-width: 991px) {
+		.tab-menu li {width: calc(25% - 32px);}
+	}
+	@media screen and (max-width: 767px) {
+		.mobile-hidden {
+			display: none !important;
+		}
+		.tab-wrap {padding: 36px 3vw; border-radius: 32px;}
+		.tab-wrap .text {font-size: 14px;}
+		.tab-menu {row-gap: 24px; column-gap: 20px; padding: 0 20px; margin: 40px 0 24px;}
+		.tab-menu li {width: calc(50% - 10px); height: 32px; border-radius: 24px;}
+		.tab-menu li a {font-size: 14px;}
+		.tab-cont-wrap {padding: 36px 4vw; border-radius: 24px;}
+		.member-wrap {flex-direction: column; gap: 24px;}
+		.member-wrap .member-info {padding: 0 10px;}
+		.member-wrap .member-info .name {margin-top: 10px;}
+		.member-wrap .member-info .name span:not(.fa) {font-size: 20px; padding-left: 26px;}
+		.fa-question-circle {font-size: 18px;}
+		.member-wrap .member-info .name p {font-size: 18px;}
+		.member-wrap .member-benefit {min-height: 80px;}
+		.member-wrap .member-benefit .name {padding-right: 16px;}
+		.member-wrap .member-benefit .name span:not(.sa-icon) {font-size: 16px; font-weight: 700;}
+		.member-wrap .member-benefit .value {gap: 4px;}
+		.member-wrap .member-benefit .value span.sa-icon.icon-ico-apply {font-size: 30px;}
+		.member-wrap .member-benefit .value span:not(.sa-icon) {font-size: 12px;}
+		.notice-wrap {margin-top: 40px;}
+		.notice-wrap .title {font-size: 18px;}
+		.notice-wrap ul li {font-size: 14px;}
+		.tooltip-explanations .tooltip-text {min-width: 180px; left: -108px; bottom: 165%;}
+	}
+	@media screen and (min-width: 766px) {
+		.desktop-hidden {
+			display: none !important;
+		}		
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script><script>
+	$(function () {
+		var tabIndex = 0;
+		$(".tab-wrap ul.tab-menu li>a").click(function (e) {
+			var tabIndex = $(this).parent().index();
+			$(".tab-wrap ul.tab-menu li").removeClass('on');
+			$(this).parent().addClass('on');
+			$('.tab-cont-wrap > div').removeClass('active');
+			$(".tab-cont-wrap > div:nth-of-type(" + (tabIndex + 1) + ")").addClass('active');
+			e.preventDefault();
+		});
+	});
+	// 카카오톡 채널 추가하기
+	Kakao.Channel.addChannel({
+		channelPublicId: '_NzvkK'
+	});
+	// 카카오톡 채널 관계 확인하기
+	Kakao.API.request({
+		url: '/v1/api/talk/channels',
+	})
+		.then(function (response) {
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+	
+</script><!-- web -->
+<div class="mobile-hidden">
+<div class="conts-wrap"><img alt="Special Benefit AMERICAN TOURISTER 멤버십 혜택" src="Promotions/2024/benefits_new/pc_visual.jpg?$staticlink$" />
+<div class="hasmap-wrap"><img alt="멤버십 등급별로 누릴 수 있는 다양한 혜택을 확인해 보세요 STEP 1 무료로 회원가입하세요 STEP 2 아메리칸 투어리스터 제품을 구매하세요 STEP 3 즉시 혜택을 받아보세요 STEP 4 멤버십 등급을 업그레이드 하세요" src="Promotions/2024/benefits_new/pc_steps.jpg?$staticlink$" /> <a href="https://www.americantourister.co.kr/register" style="position: absolute; left:36.1458%; top:88.4600%; width:28.0208%; height:5.7109%;">회원가입 바로가기</a></div>
+
+<div class="tab-wrap">
+<p class="text">아메리칸 투어리스터 멤버십 회원이 되시면 멤버십 전용 혜택을 이용할 수 있을 뿐만 아니라,<br />
+연중 내내 다양한 이벤트 및 제품 런칭 소식을 받으실 수 있습니다.</p>
+
+<ul class="tab-menu">
+	<li class="on"><a href="javascript:void(0);">INSIDER</a></li>
+	<li><a href="javascript:void(0);">ELITE</a></li>
+	<li><a href="javascript:void(0);">STAR</a></li>
+	<li><a href="javascript:void(0);">ICON</a></li>
+</ul>
+
+<div class="tab-cont-wrap">
+<div class="tab-cont active">
+<div class="member-wrap">
+<div class="member-info insider">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_insider.jpg?$staticlink$" /></div>
+
+<div class="name"><span>INSIDER</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">아메리칸 투어리스터 온라인 스토어 신규 회원</span> </span>
+
+<p>(인사이더-신규회원)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>1만원 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info elite">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_elite.jpg?$staticlink$" /></div>
+
+<div class="name"><span>ELITE</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 30만원 이상 60만원 미만</span> </span>
+
+<p>(엘리트)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info star">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_star.jpg?$staticlink$" /></div>
+
+<div class="name"><span>STAR</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 60만원 이상 100만원 미만</span> </span>
+
+<p>(스타)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>15% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info icon">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_icon.jpg?$staticlink$" /></div>
+
+<div class="name"><span>ICON</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 100만원 이상</span> </span>
+
+<p>(아이콘)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>20% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="btn-wrap hasmap-wrap"><img alt="" src="Promotions/2024/benefits_new/pc_btn.jpg?$staticlink$" /> <a href="https://www.americantourister.co.kr/termsAndConditions.html" style="position: absolute; left:36.2919%; top:32.2086%; width:27.0874%; height:23.6196%;">이용약관 바로가기</a></div>
+
+<div class="notice-wrap">
+<h5 class="title">Notice</h5>
+
+<ul>
+	<li>해당 등급 기준에 도달 및 배송완료 14일 후 자동 상위 등급으로 업그레이드 됩니다.</li>
+	<li>등급은 가입(또는 업데이트)일로부터 1년간 유지되며, 해당 기간 동안 멤버십 혜택을 자유롭게 이용하실 수 있습니다.</li>
+	<li>세부내용은 &lsquo;마이페이지 - 쿠폰현황&rsquo;의 쿠폰별 사용조건을 확인하세요.</li>
+</ul>
+</div>
+</div>
+
+<!-- <div class="hasmap-wrap"><img alt="" src="Promotions/2024/benefits_new/pc_benefits.jpg?$staticlink$" /> <a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" style="position: absolute; left:62.1354%; top:78.6598%; width:25.0000%; height:12.9897%;" target="_blank" title="새 창">카카오 플러스 채널추가</a></div> -->
+</div>
+</div>
+<!-- // web --><!-- mobile -->
+
+<div class="desktop-hidden">
+<div class="conts-wrap"><img alt="Special Benefit AMERICAN TOURISTER 멤버십 혜택" src="Promotions/2024/benefits_new/mo_visual.jpg?$staticlink$" />
+<div class="hasmap-wrap"><img alt="멤버십 등급별로 누릴 수 있는 다양한 혜택을 확인해 보세요 STEP 1 무료로 회원가입하세요 STEP 2 아메리칸 투어리스터 제품을 구매하세요 STEP 3 즉시 혜택을 받아보세요 STEP 4 멤버십 등급을 업그레이드 하세요" src="Promotions/2024/benefits_new/mo_steps.jpg?$staticlink$" /> <a href="https://www.americantourister.co.kr/register" style="position: absolute; left:21.8825%; top:90.3472%; width:55.2695%; height:5.7662%;">회원가입 바로가기</a></div>
+
+<div class="tab-wrap">
+<p class="text">아메리칸 투어리스터 멤버십 회원이 되시면 멤버십 전용 혜택을 이용할 수 있을 뿐만 아니라,<br />
+연중 내내 다양한 이벤트 및 제품 런칭 소식을 받으실 수 있습니다.</p>
+
+<ul class="tab-menu">
+	<li class="on"><a href="javascript:void(0);">INSIDER</a></li>
+	<li><a href="javascript:void(0);">ELITE</a></li>
+	<li><a href="javascript:void(0);">STAR</a></li>
+	<li><a href="javascript:void(0);">ICON</a></li>
+</ul>
+
+<div class="tab-cont-wrap">
+<div class="tab-cont active">
+<div class="member-wrap">
+<div class="member-info insider">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_insider.jpg?$staticlink$" /></div>
+
+<div class="name"><span>INSIDER</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">아메리칸 투어리스터 온라인 스토어 신규 회원</span> </span>
+
+<p>(인사이더-신규회원)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>1만원 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info elite">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_elite.jpg?$staticlink$" /></div>
+
+<div class="name"><span>ELITE</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 30만원 이상 60만원 미만</span> </span>
+
+<p>(엘리트)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info star">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_star.jpg?$staticlink$" /></div>
+
+<div class="name"><span>STAR</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 60만원 이상 100만원 미만</span> </span>
+
+<p>(스타)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>15% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-cont">
+<div class="member-wrap">
+<div class="member-info icon">
+<div class="img"><img alt="" src="Promotions/2024/benefits_new/card_icon.jpg?$staticlink$" /></div>
+
+<div class="name"><span>ICON</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">12개월 구매합계 100만원 이상</span> </span>
+
+<p>(아이콘)</p>
+</div>
+</div>
+
+<div class="member-benefit-wrap">
+<div class="member-benefit">
+<div class="name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value">&nbsp;</div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">ELITE(엘리트) : 12개월 구매 합계 30만원 이상 60만원 미만<br />
+STAR(스타) : 12개월 구매 합계 60만원 이상 100만원 미만<br />
+ICON(아이콘) : 12개월 구매 합계 100만원 이상</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>20% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="member-benefit">
+<div class="name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다.</span> </span></div>
+
+<div class="value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="btn-wrap hasmap-wrap"><img alt="" src="Promotions/2024/benefits_new/mo_btn.jpg?$staticlink$" /> <a href="https://www.americantourister.co.kr/termsAndConditions.html" style="position: absolute; left:26.5564%; top:16.2069%; width:47.2763%; height:37.9310%;">이용약관 바로가기</a></div>
+
+<div class="notice-wrap">
+<h5 class="title">Notice</h5>
+
+<ul>
+	<li>해당 등급 기준에 도달 및 배송완료 14일 후 자동 상위 등급으로 업그레이드 됩니다.</li>
+	<li>등급은 가입(또는 업데이트)일로부터 1년간 유지되며, 해당 기간 동안 멤버십 혜택을 자유롭게 이용하실 수 있습니다.</li>
+	<li>세부내용은 &lsquo;마이페이지 - 쿠폰현황&rsquo;의 쿠폰별 사용조건을 확인하세요.</li>
+</ul>
+</div>
+</div>
+
+<!-- <div class="hasmap-wrap"><img alt="" src="Promotions/2024/benefits_new/mo_benefits.jpg?$staticlink$" /> <a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" style="position: absolute; left:20.9171%; top:84.1106%; width:58.0048%; height:9.5987%;" target="_blank" title="새 창">카카오 플러스 채널추가</a></div> -->
+</div>
+</div>
+<!--//mobile-->

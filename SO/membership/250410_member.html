@@ -1,0 +1,737 @@
+<style type="text/css">@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+  .button.desktop {display: none !important;}
+  .button.mobile {display: block !important;}
+  br.desktop {display: none;}
+  br.mobile {display: block;}
+  @media screen and (max-width: 1023px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .desktop-hidden {
+      display: none !important;
+    }
+  }
+  .container-fluid.MembershipPrivilegePage {padding: 0;}
+  .MembershipPrivilegePage.user-loggedin .page-banner .button {display: none !important;}
+  .breadcrumb-wrapper {display: none;}
+  .promotion-head.container {display: none;}
+  .membership-page {font-family: 'Pretendard'; overflow: hidden;}
+  /* top banner */
+  .page-banner {position: relative; overflow: hidden;}
+  .page-banner picture,
+  .page-banner img {width: 100%;}
+  .membership-page .page-banner .banner-info {position: absolute; z-index: 1; left: 50%; top: 25px; transform: translateX(-50%); width: 100%;}
+  .membership-page .page-banner h5 {color: white; font-family: 'Pretendard'; font-size: 8vw; text-align: center; word-break: keep-all; font-weight: 700;}
+  .section-title {padding: 10px 0 40px; color: black; font-family: 'Pretendard'; font-size: 6.25vw; text-align: center; word-break: keep-all; font-weight: 700; line-height: 1.4;}
+  a.button {display: block; max-width: 320px; min-width: 77%; max-height: 56px; padding: 0.8em; margin: auto; background: black; color: white !important; font-size: 16px; font-weight: 500; text-align: center;}
+  .page-banner a.button {position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%);}
+  /* steps */
+  .steps-wrap {max-width: 80%; margin: 40px auto 0; text-align: center; }
+  .step-1, .step-2, .step-3, .step-4 {display: flex; flex-direction: column; margin-bottom: 48px;}
+  .step-4 {margin-bottom: 0;}
+  .steps-wrap picture {display: flex; min-height: 100px; max-height: 100px; align-items: center; justify-content: center;}
+  .steps-wrap picture img {display: inline; width: auto !important;}
+  h2.page-title {display: none;}
+  .step-containre {max-width: 50%; margin: auto; padding: 30px 0 10px;}
+  .step-containre h3 {font-weight: 700;}
+  .step-containre label {font-size: 16px !important; margin-bottom: 0;}
+  .text {width: 100%; margin: auto; padding: 25px 0; font-size: 18px; text-align: center; line-height: 1.5; word-break: keep-all;}
+  /* carousel */
+  .owl-carousel {display: flex; flex-direction: row;} 
+  .card-benefits.slider {display: flex; flex-direction: row;}
+  .owl-carousel .owl-item img {display: inline-block; width: auto; max-width: 192px;}
+  .owl-carousel .owl-nav .owl-prev:before,
+  .owl-carousel .owl-nav .owl-next:before {content: none;}
+  .owl-carousel .owl-nav button.owl-prev {
+    background: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABNCAQAAAAbIxxwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnAxASEBsPKQB2AAACiUlEQVRYw52WTUhUURiGn3dGDIssI50yCTQMIxOiCNGg/ygkkqQkEkpsoCyCgtoEbdq0DHdJtGtRGkqmoDYzpg6UFJEQQbSLoqDCFkKubOO/9+fc79zNne/jve/DO4fvHAnjqiYvx6qlie8xo/QO62lHlqdeGa0QFmmZRlUlbOIBnZt5i5z2Q/5wa+Y9out1dc3/iiY9qCEV2MQblVXNwkoUcZ+uLKk4B9ZGjKtLao6uST1fXnWT7taoEjZxvkZ01KvjIu7QTZ9OaGD3SNDs0wtxbdKA5NcNllYqq3L/fpA0V2nVB308aJI8YpjuwDx8v3tbj8P+B7/GCaWVZxOX6bV2hu8A73K/LjhtW49N0s7E3KAhWmA39MzJ1QP7gLJaaxMXaljVrtKl4m61uksXB9ZGDq2uU2lxYEn1RXJdgF2trEps4nwNeQ8aF3Gn76AJDewuxbRECmousDPqNrkiYuQyZXIF4hrnMLt4ZcNGBRrQDgt2XPCPGJd5YsEG+EAdFYxasBFKKKUKCzbAJHlcpCOa8fzcfsA012zYCJUqpVILNsAEa2imM2ras2uMRtbxzoKN0DalVWTBBvhFMWdDjjdfZ4S6dD7aGFr4VGnQbXbHPY6bn5TRQI8NG6FenbZhI1SjtFZZsAG+Us5Jem3YCPWozoaN0KGgO5gIvg2l+Mh9KzaS+nXEho3QMb2Invbs+sJeaklZsBFaqUHV2rAROuV3codhA3xiH3vIWLARyteg143QxRmmmObS8jPFTQzjHGc7IxZshIqUUaUFG2CSHJI8tWADvKeeEt5YsBHarIy2WLAB/rKalvnjMJoYxmigkLcWbIS2KqNNFmyA32xgPy8t2ACf+cE3gP9EJG9f57ZfWQAAAABJRU5ErkJggg==');
+    width: 30px;
+    height: 70px;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    background: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABNCAQAAAAbIxxwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnAxASGDaCL9YLAAACiElEQVRYw52WTUhUURiGn3fGLKGfsRQVE1PKCIRKgzIkKqlFaBHmQk1pkbWIEFoULV21ENq1aSEthKiFjjr04+g4kuYYjpughat2tSkpWka0mBGdcebOud+5m3O/j/e8z/3u+QsKIdSiYq2n+85PgFRr4Qr+W3qUg4qpwa9zUKkxflPCXV75M94QwwrXqGbZgo1QvWZVY8EGWKecPsYs2ABL9BAiacFG6KimVWHBBvhBNT2Ebc4IRXTTzTlXsEkzKrVgA3yjjk6mbNgITeqGDRuhVkVV7LqqstsCSZ5asRF6rw4bNkLn9VYBv9XeaF9ppo2oDRsVaVoXbdgIdShqwwZY4zTnmLFgI7RL73TGho1Ql6Zs2ABfaKOZuAUboZBm1WTDRqhXYRs2wGfaOcyiBRuhSs3omM0Z/rAz+0xxF8MqHdSSsGAjVKuYDlmwAX4Ron/zTPEnhmW6KWPFgo3QEc2qyoIN8JMKehm3OSM0oX4/0zPzOaE5HbBgA3ynhi4mZRIDPOdTwKolQGORUXqf3dy2Feys5lVmq/Z+LeiC9VeF9SDd813tYfZxJ9336XpLbzbf/ElPKqE6m7hEcbVvjfgRj+pxZsR9hg3xjydZMUfXTs1tv+C4SRv0UY3b4y7SgKbVnSvj8s0jJHmZM1PQ95Fe58sVkl7WvPbYxFVa1Kn8eW9xRAOeeY9V9Yy/DHqWMu+o9xQpVMx8iVYtqdImLlXc69roLR7ToNO0zVGwYUIMOK20baP1eV1VvbGP68PWjcaPuEQxXXWVZq+qF8SZdN5bMpyHNOrumol9XTHtsInrtZB9OXQX59loXAo2wmqejaZgwR5q3L9rCvuSJlRuEwe1lwRrBmTgP6dNbG3ZOr37AAAAAElFTkSuQmCC');
+    width: 30px;
+    height: 70px;
+  }
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-nav .owl-prev {top: 120px;}
+  .card-benefits {text-align: center; margin: 40px 0; padding: 0 20px;}
+  .card-benefits .row {margin: 0;}        
+  .card-section.card-title {display: none;}
+  .card-wrap {display: flex; flex-direction: column; justify-content: center; padding: 20px 0;}
+  .card-detail {display: flex; flex-direction: column; min-height: 130px;}
+  .card-detail span {padding: 2px 0; font-size: 16px;}
+  .card-detail span:nth-child(1) {font-family: 'GT-America'; font-weight: 700;}
+  .card-detail span:nth-child(2) {font-family: 'GT-America'; font-size: 48px; font-weight: 300;}
+  .benefit-value span:not(.sa-icon) {width: 100%; display: block; padding-top: 5px; font-size: 17px;}
+  .benefits-wrap {border-top: 1px solid #cccdce; margin: auto; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 30px;}
+  .benefits-wrap.has-text {padding-bottom: 20px;}        
+  .benefit-name {display: flex; flex-direction: row; justify-content: space-between; padding-top: 20px;}
+  .benefit-name span.fa-question-circle {padding-right: 55px;}
+  .benefit-name span:first-child {font-size: 22px;}
+  span.sa-icon.icon-ico-apply {border: 1px solid #000; background-color: #fff; border-radius: 50%; font-size: 35px;}       
+  /* Tooltip */
+  .fa-question-circle {position: relative; display: inline-block; font-size: 25px;}
+  .fa-question-circle:before {color: #9d9fa2;}
+  .fa-question-circle .tooltiptext {visibility: hidden; min-width: 150px; background-color: white; color: #000; text-align: center; padding: 10px; position: absolute; z-index: 1; border: 1px solid #000; bottom: 0; transform: translateY(-25%); left: 0;}
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .fa-question-circle:hover .tooltiptext {visibility: visible;}
+  .tooltip-explanations {position: relative; display: inline-block; opacity: 1}
+  .tooltip-explanations .tooltip-text {visibility: visible; position: absolute; bottom: 200%; left: -180px; min-width: 250px; padding: 10px; border: 1px solid #d9d9d9; border-radius: 0; background-color: #fff; color: #000; font-family: 'Pretendard'; font-size: 14px !important; font-weight: 400; text-align: left; line-height: 1.2; opacity: 0; z-index: 9999; transition: opacity .5s; text-transform: none; pointer-events: none;}
+  @media(min-width: 768px) {
+    .tooltip-explanations .tooltip-text {right: 0; bottom: 170%;}
+  }
+  @media(min-width: 1024px) {
+    .tooltip-explanations .tooltip-text {top: auto; bottom: 100%; left: 50%; transform: translate(-50%, -15px); font-size: 16px;}
+  }
+  .tooltip-explanations .tooltip-text:before {content: ""; position: absolute; bottom: -20px; right: 53px; left: auto; border: 10px solid transparent; border-top-color: #d9d9d9}
+  @media(min-width: 768px) {
+    .tooltip-explanations .tooltip-text:before {bottom: -20px; left: auto;}
+  }
+  @media(min-width: 1024px) {
+    .tooltip-explanations .tooltip-text:before {top: 100%; right: 43.5%; transform: translateX(-50%)}
+  }
+  .tooltip-explanations .tooltip-text:after {content: ""; position: absolute; bottom: -16px; right: 55px; left: auto; border: 8px solid transparent; border-top-color: #fff}
+  @media(min-width: 768px) {
+    .tooltip-explanations .tooltip-text:after {bottom: -15px; left: auto;}
+    .section-tile {font-size: 2.8rem;}
+  }
+  @media(min-width: 1024px) {
+    .tooltip-explanations .tooltip-text:after {top: 99.99%; right: 45%; transform: translateX(-50%)}
+  }
+  .tooltip-explanations:hover {cursor: pointer}
+  .tooltip-explanations:hover .tooltip-text {visibility: visible; opacity: 1}
+  .tooltip-explanations .explanation-link {display: block; text-decoration: underline; transition: opacity .5s}
+  /* notice */
+  .notice-wrap {padding: 0 20px; margin-bottom: 80px;}
+  .notice-wrap .title {font-family: 'GT-America'; margin-bottom: 20px; font-size: 20px; font-weight: 700; letter-spacing: -0.05em;}
+  .notice-wrap ul {padding-left: 0; list-style: none; margin-bottom: 40px;}
+  .notice-wrap ul li {position: relative; padding-left: 8px; color: #333; font-size: 16px;}
+  .notice-wrap ul li::before {content: '·'; position: absolute; top: 0; left: 0;}
+  .notice-wrap ul li+li {margin-top: 10px;}
+  .notice-wrap a.notice-btn {display: block; max-width: 85%; margin: 0 auto;}
+  /* benefit */
+  .benefits-info {padding: 60px 0; background-color: #f2f2f2;}
+  .benefits-info .row {max-width: 90%; margin:0 auto;}
+  .benefits-info .benefits-title {margin-bottom: 40px; font-family: 'Pretendard'; font-size: 28px; font-weight: 700; text-align: center;}       
+  .benefits-box {max-width: 650px; margin: 0 auto;} 
+  .benefits-box.kakao {margin-top: 30px;}
+  .benefits-box picture {display: block; max-width:100%; margin: 0 auto;}
+  .benefits-box .txt {padding: 6.25vw 0 7.18vw; margin-bottom: 0; color: #333; font-size: 20px; letter-spacing: -0.05em; line-height: 1.4; text-align: center;}
+  .benefits-box .txt strong {display: block;}
+  .benefits-box .txt-box {max-width: 630px; min-height:auto; padding: 30px; margin: 40px auto 0; border-top: 1px dotted #000; border-bottom: 1px dotted #000;}
+  .benefits-box .txt-box .title {margin-bottom: 25px; font-family: 'Pretendard'; font-size: 18px; font-weight: 700; letter-spacing: -0.05em;}
+  .benefits-box .txt-box ul {padding-left: 0; margin-bottom: 0; list-style: none;}
+  .benefits-box .txt-box ul li {position: relative; padding-left: 8px; color: #555; font-size: 16px; word-break: keep-all; line-height: 1.4; letter-spacing: -0.05em;}
+  .benefits-box .txt-box ul li+li {margin-top: 8px;}
+  .benefits-box .txt-box ul li:before {content: '·'; position: absolute; top: 0; left: 0;}
+  .benefits-box .btn-box {display: flex; flex-direction: column; justify-content: center; gap: 15px;}
+  .benefits-box .btn-box a {display: block; margin: 0 auto; width: 100%; max-width: 442px;}
+  .benefits-box .btn-box a > picture {max-width: 100%;}
+  /* tablet */
+  @media (min-width: 768px) {
+    .membership-page .page-banner {margin: 0 -15px;}
+    /* .membership-page .page-banner .banner-info h5 {font-size: 6.25vw;} */
+    .card-benefits.slider {padding: 0 40px;}
+    .card-section {min-width: 210px;}
+    .card-wrap {min-height: 350px;}
+    .notice-wrap a.notice-btn {max-width: 500px;}
+    .benefits-box.kakao {margin-top: 0;}
+    .benefits-box picture {max-width: 520px;}
+  }
+  /* pc */
+  @media (min-width: 1024px) {
+    .button.desktop {display: block !important;}
+    .button.mobile {display: none !important;}
+    br.desktop {display: block;}
+    br.mobile {display: none;}
+    .membership-page .page-banner .banner-info {bottom: auto; top: 30%; transform: translateX(10%); left: 0; text-align: left;}
+    .membership-page .page-banner .banner-info h5 {display: block; padding-bottom:30px; font-size: 4vw; line-height: 4.6vw; text-align: left !important; font-weight: normal;}
+    .membership-page .page-banner .banner-info a.button {left: 0; top: auto; bottom: auto; transform: translateX(0); max-width: 400px; max-height: 70px; min-width: 400px; font-size: 22px; padding: 1em;}
+    .section-title {padding: 20px 0 60px; font-size: 3.6rem;}
+    .step-containre {max-width: 80%;}
+    .step-1, .step-2, .step-3, .step-4 {margin: 0;}
+    .text {padding: 60px 0 40px; font-size: 28px;}
+    .card-section {border-right: 1px solid #cccdce; width: 100%;}
+    .card-section.card-title {display: block;}
+    .card-section.first-card {border-right: none;}
+    .card-wrap {padding-top: 0; justify-content: flex-start; padding-bottom: 0; min-height: 358.8px;}
+    .card-wrap picture {max-width: 192px; margin: 0 auto; border: 1px solid white;}
+    .card-wrap .card-detail span:nth-child(2) {font-size: 40px;}
+    .card-detail {justify-content: center;}
+    .benefits-wrap {min-height: 85px; padding: 0; justify-content: center;}
+    .benefits-wrap.has-text {padding: 0;}
+    .benefit-name {display: none;}    
+    .card-title .benefit-name {display: flex; padding: 0; text-align: left; justify-content: space-between;}
+    .card-title .benefit-name span.fa-question-circle {font-size: 25px; padding-right: 15px !important;}
+    .benefit-value {font-size: 12px;}
+    /* notice */
+    .notice-wrap {padding: 0 40px;}
+    .notice-wrap .title {font-size: 30px;}
+    .notice-wrap ul li {font-size: 22px;}
+    /* benefit */
+    .benefits-info {padding: 100px 0;}
+    .benefits-info .row {max-width: 80%; justify-content: center;}
+    .benefits-info .benefits-title {font-size: 50px;}          
+    .benefits-box .txt {padding: 30px 0; font-size: 28px;}        
+    .benefits-box .txt-box {min-height: 250px; padding: 40px 50px; margin-top: 0;}
+    .benefits-box .txt-box .title {font-size: 23px;text-align: center;}
+    .benefits-box .txt-box ul li {font-size: 20px;}
+    .benefits-box .txt-box ul li+li {margin-top: 12px;}
+    .benefits-box .btn-box {min-height: 245px; padding: 40px;}
+  }
+  @media (min-width: 1440px) {
+    .card-wrap .card-detail span:nth-child(2) {font-size: 36px;}
+  }
+</style>
+<script>
+// 카카오톡 채널 추가하기
+Kakao.Channel.addChannel({
+  channelPublicId: '_xhWBNxj'
+});
+// 카카오톡 채널 관계 확인하기
+Kakao.API.request({
+  url: '/v1/api/talk/channels',
+})
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</script>
+<div class="membership-page"><!-- Page Banner -->
+<div class="page-banner"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/banner-mobile.jpg?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/banner.jpg?$staticlink$" /> </picture>
+<div class="banner-info">
+<h5>쌤소나이트<br class="mobile" />
+멤버십 혜택을<br class="desktop" />
+소개합니다</h5>
+<a class="button desktop" href="https://www.Samsonite.co.kr/register">회원가입 바로가기</a></div>
+<a class="button mobile" href="https://www.Samsonite.co.kr/register">회원가입 바로가기</a></div>
+<!-- //Page Banner --><!-- steps -->
+
+<div class="steps-wrap">
+<div class="row">
+<div class="col-12">
+<h2 class="section-title">멤버십 등급별로 누릴 수 있는<br class="mobile" />
+다양한 혜택을 확인해 보세요</h2>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3 step-1"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/icon-step1-mobile.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/icon-step1.png?$staticlink$" /> </picture>
+
+<div class="step-containre">
+<h3>STEP 1</h3>
+<label>무료로<br />
+회원가입 하세요</label></div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3 step-2"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/icon-step2-mobile.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/icon-step2.png?$staticlink$" /> </picture>
+
+<div class="step-containre">
+<h3>STEP 2</h3>
+<label>쌤소나이트 제품을<br />
+구매하세요</label></div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3 step-3"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/icon-step3-mobile.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/icon-step3.png?$staticlink$" /> </picture>
+
+<div class="step-containre">
+<h3>STEP 3</h3>
+<label>즉시 혜택을<br />
+받아보세요</label></div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3 step-4"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/icon-step4-mobile.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/icon-step4.png?$staticlink$" /> </picture>
+
+<div class="step-containre">
+<h3>STEP 4</h3>
+<label>멤버십 등급을<br />
+업그레이드 하세요</label></div>
+</div>
+
+<div class="text">쌤소나이트 멤버십 회원이 되시면<br class="mobile" />
+멤버십 전용 혜택을<br class="mobile" />
+이용할 수 있을 뿐만 아니라,<br />
+연중 내내 다양한 이벤트 및 제품 런칭<br class="mobile" />
+소식을 받으실 수 있습니다.</div>
+</div>
+</div>
+<!-- //steps --><!-- benefits slider -->
+
+<div class="card-benefits slider mobile-hidden">
+<div class="card-section card-title">
+<div class="card-wrap">&nbsp;</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+</div>
+</div>
+
+<div class="new-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/new_member_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/new_member_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>NEW MEMBER</span> <span>신규회원</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>1만원 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="economy-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/economy_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/economy_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>ECONOMY</span> <span>이코노미</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="business-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/business_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/business_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>BUSINESS</span> <span>비즈니스</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>15% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="first-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/first_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/first_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>FIRST</span> <span>퍼스트</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>20% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+<!-- //benefits slider --><!-- benefits slider -->
+
+<div class="card-benefits slider desktop-hidden">
+<div class="owl-carousel" data-slider-settings="{&quot;items&quot;: 1, &quot;loop&quot;: true, &quot;dots&quot;: true, &quot;nav&quot;: true, &quot;dotsContainer&quot;: &quot;.dots-owl-container&quot;}">
+<div class="new-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 768px)" srcset="images/promotion/2024/benefit_new/new_member_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/new_member_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>NEW MEMBER</span> <span>신규회원</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>1만원 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="economy-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 768px)" srcset="images/promotion/2024/benefit_new/economy_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/economy_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>ECONOMY</span> <span>이코노미</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="business-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 768px)" srcset="images/promotion/2024/benefit_new/business_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/business_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>BUSINESS</span> <span>비즈니스</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>15% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+
+<div class="first-card card-section">
+<div class="card-wrap"><picture> <source media="(max-width: 768px)" srcset="images/promotion/2024/benefit_new/first_card.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/first_card.png?$staticlink$" /> </picture>
+
+<div class="card-detail"><span>SAMSONITE</span> <span>FIRST</span> <span>퍼스트</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>최신뉴스</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">모든 신제품 출시, 다가오는 프로모션 등을 가장 먼저 알아보세요</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>신규가입 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">신규 가입 시 자동 발급되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>첫 구매 감사 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">첫 구매 14일 후 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>멤버십 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">Economy(이코노미): 12개월 구매합계 50만원 이상 100만원 미만<br />
+Business(비즈니스): 12개월 구매합계 100만원 이상 300만원 미만<br />
+First(퍼스트): 12개월 구매합계 300만원 이상</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>20% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap has-text">
+<div class="benefit-name"><span>생일 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">생일 일주일 전 마이페이지에 자동 생성되며, 5만원 이상 구매 시 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span> <span>10% 할인쿠폰</span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>포인트 혜택</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">10P 단위로 결제 금액의 20%까지 사용 가능합니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+
+<div class="benefits-wrap">
+<div class="benefit-name"><span>무료배송</span> <span class="fa fa-question-circle tooltip-explanations"> <span class="tooltip-text">전 제품 무료 배송됩니다</span> </span></div>
+
+<div class="benefit-value"><span class="sa-icon icon-ico-apply"></span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- //benefits slider --><!-- notice -->
+
+<div class="notice-wrap">
+<div class="row">
+<div class="col-12">
+<h5 class="title">NOTICE</h5>
+
+<ul>
+	<li>해당 등급 기준에 도달 및 배송완료 14일 후 자동 상위 등급으로 업그레이드 됩니다.</li>
+	<li>등급은 가입(또는 업데이트)일로부터 1년간 유지되며, 해당 기간 동안 멤버십 혜택을 자유롭게 이용하실 수 있습니다.</li>
+	<li>세부내용은 &lsquo;마이페이지 - 쿠폰현황&rsquo;의 쿠폰별 사용조건을 확인하세요.</li>
+</ul>
+</div>
+
+<div class="col-12"><a class="notice-btn" href="https://www.samsonite.co.kr/termsAndConditions.html"><picture> <source media="(max-width: 991px)" srcset="images/promotion/2024/benefit_new/btn-terms-mobile.jpg?$staticlink$" /> <img alt="이용약관 바로가기" src="images/promotion/2024/benefit_new/btn-terms.jpg?$staticlink$" /> </picture> </a></div>
+</div>
+</div>
+<!-- //notice -->
+
+<div class="benefits-info">
+<div class="row">
+<div class="col-12">
+<h5 class="benefits-title">공식 온라인몰 전용 추가혜택</h5>
+</div>
+
+<div class="col-12">
+<div class="benefits-box"><picture> <source media="(max-width: 767px)" srcset="images/promotion/2024/benefit_new/benefit-coupon1.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/benefit-coupon1.png?$staticlink$" /> </picture>
+
+<p class="txt">쌤소나이트 공식 온라인몰을 모바일로 이용하시는 고객분들께 <strong>모바일 전용 5% 할인 쿠폰을 드립니다.</strong></p>
+
+<div class="btn-box desktop-hidden"><a class="download-coupon" href="$url('Coupon-Download','couponCode','1953','format','ajax')$"><img alt="모바일 쿠폰 받기" src="images/promotion/2024/benefit_new/btn-mobile-coupon.jpg?$staticlink$" /> </a></div>
+
+<div class="txt-box">
+<h6 class="title">사용방법 및 유의사항</h6>
+
+<ul>
+	<li>모바일 페이지를 통해서만 다운로드 가능합니다.</li>
+	<li>1회당 5만원 이상 구매 시 사용 가능하며,	무제한 다운로드 가능합니다.</li>
+	<li>'쿠폰제외상품'은 할인이 적용되지 않습니다.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- <div class="col-12 col-lg-6">
+<div class="benefits-box kakao"><picture> <source media="(max-width: 767px)" srcset="images/promotion/2024/benefit_new/benefit-coupon2.png?$staticlink$" /> <img alt="" src="images/promotion/2024/benefit_new/benefit-coupon2.png?$staticlink$" /> </picture>
+
+<p class="txt">카카오톡 채널에서<br />
+&lsquo;쌤소나이트&rsquo; 공식 계정 친구 추가하면<strong>즉시 사용 가능한 5% 할인 쿠폰을 드립니다.</strong></p>
+
+<div class="btn-box"><a href="$url('Search-Show','cgid','soev_2311_kakao_chanel')$"><picture> <source media="(max-width: 767px)" srcset="images/promotion/2024/benefit_new/btn-coupon-mobile.jpg?$staticlink$" /> <img alt="쿠폰혜택 둘러보기" src="images/promotion/2024/benefit_new/btn-coupon.jpg?$staticlink$" /> </picture> </a> <a href="http://pf.kakao.com/_sEKxcE/friend" id="kakao-add-channel-button" target="_blank" title="새 창"> <picture> <source media="(max-width: 767px)" srcset="images/promotion/2024/benefit_new/btn-kakao-mobile.jpg?$staticlink$" /> <img alt="카카오톡 채널 추가" src="images/promotion/2024/benefit_new/btn-kakao.jpg?$staticlink$" /> </picture> </a></div>
+</div>
+</div> -->
+</div>
+</div>
+</div>
