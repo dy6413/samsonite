@@ -1,0 +1,147 @@
+<style type="text/css">
+  .header-banner {min-height:4.008rem;}
+  .header-banner.hide {min-height:unset;}
+  .header-banner .carousel-promo-message {min-height:35px;max-height:80px;font-family:Nanum Gothic;}
+  .header-banner .carousel-promo-message .carousel-inner {width:65%;margin:0 auto;top:50%;left:50%;transform:translate(-50%, -50%);position:absolute;}
+  .header-banner .carousel-promo-message .carousel-inner .carousel-item,
+  .header-banner .carousel-promo-message .carousel-inner .carousel-item a {line-height:1.5;}
+  .carousel-item-next.carousel-item-left {transform:translateX(100%);}
+  .carousel-item-prev.carousel-item-right {transform:translateX(-100%);}
+  @supports (transform-style: preserve-3d) {
+    .carousel-item-next.carousel-item-left {transform:translate3d(100%, 0, 0);}
+  }
+  @media screen and (max-width: 450px) {
+    .carousel-inner .carousel-item a {font-size:3.4vw;margin:auto;text-align:center;vertical-align:middle;}
+    .carousel-inner .carousel-item a span:first-child {display:block;width:100%;}
+  }
+  @media screen and (max-width: 767px) {
+    .header-banner.slide-up {display:block !important;}
+    .header-banner.slide-up.hide {display:none !important;}
+  }
+  .pdp-price-additional-info {text-align: center;margin-top: 1rem;}
+  .pdp-price-additional-info a {text-decoration:underline;}
+  #pdp-promotion-message-popup_2 .modal-header,
+  #pdp-promotion-message-popup_3 .modal-header {border:0;display:block;text-align:right;}
+  #pdp-promotion-message-popup_2 .modal-body {padding:15px;}
+  #pdp-promotion-message-popup_3 .modal-body {padding:0;margin-top:-20px;}
+  #pdp-promotion-message-popup_2 .modal-body h3.pop_tit_h3,
+  #pdp-promotion-message-popup_3 .modal-body h3.pop_tit_h3 {text-align: center;font-family: inherit;}
+  /* #pdp-promotion-message-popup_2 .btn-close-popup {background:transparent;border:0;outline:none;cursor:pointer;} */
+  #pdp-promotion-message-popup_2 .btn-close-popup,
+  #pdp-promotion-message-popup_3 .btn-close-popup {position:relative;background:transparent;border:0;outline:none;cursor:pointer;z-index:1;}
+  .underline {display:inline !important;text-decoration:underline;}
+</style>
+<div class="carousel slide carousel-promo-message" data-ride="carousel" id="carouselPromotionMessage">
+  <div class="carousel-inner">
+    <!-- <div class="carousel-item"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAYAAACEJVa/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACuSURBVHgBrZLRDQIhEER3iQWcFXhcB1ZkC1iBWMFpB1bG0YHYADiToPHPQ3zJhOVjJ7A7KmCaphMOBw2yngTdQghHhcFcStlCLsaY1jqMQFU9FGlyzznvYRClEfgMxpiFXynSAfu11+TtJB2w38gf2HxerLULpj2ijFidrXdhLd+eIw3QmBuF3Kuf30lclfwAs8J+bsej2CEr55as1IzMKB9an3TBcZD22F8xL/8E+v9FQMn0qoYAAAAASUVORK5CYII=" /> <span>KB국민 APP카드로 결제 시,</span> <a data-target="#pdp-promotion-message-popup_2" data-toggle="modal" href="#"> 최대 5만원 즉시할인 혜택&nbsp; <span class="underline">더보기</span> </a></div> -->
+
+    <div class="carousel-item active"><a href="$url('Search-Show','cgid','benefit_new_member')$"><span>신규가입 10% 쿠폰 혜택</span></a></div>
+          
+    <div class="carousel-item"><a href="$url('Search-Show','cgid','soev_22_review')$"><span>리뷰이벤트 참여하기</span></a></div>
+      
+    <div class="carousel-item"><a href="$url('Page-Show','cid','monogram')$">모노그램 서비스 이용안내</a></div>
+  </div>
+  <a class="carousel-control carousel-control-prev" data-slide="prev" href="#carouselPromotionMessage" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> </a> <a class="carousel-control carousel-control-next" data-slide="next" href="#carouselPromotionMessage" role="button"> <span aria-hidden="true" class="carousel-control-next-icon"></span> </a></div>
+
+  <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="pdp-promotion-message-popup_2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <style type="text/css">.modal-content {
+                line-height: 160%;
+            }
+            .kb_list {
+                padding-left: 10px;
+            }
+            .kb_list dt {
+                margin-bottom: 0rem;
+                font-weight: 700;
+            }
+            .kb_list dd {
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+            .kb_caution {
+                background: #eceff1;
+                padding: 20px;
+            }
+            .kb_caution dt {
+                margin-bottom: 0.5rem;
+            }
+            .kb_caution_list {
+                padding: 0;
+                font-size: 0.9rem;
+                word-break: break-word;
+            }
+            .kb_caution_list li {
+                position: relative;
+                padding-left: 15px;
+                list-style: none;
+            }
+            .kb_caution_list li::before {
+                content: '-';
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .kb_caution_list li:last-child {
+                padding: 10px 0 0 0;
+                font-size: 12px;
+                color: #666;
+            }
+            .kb_caution_list li:last-child:before {
+                display: none;
+            }
+</style>
+<div class="modal-content">
+<div class="modal-header"><button aria-label="Close" class="btn-close-popup btn-close-prize" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button></div>
+
+<div class="modal-body">
+<h3 class="pop_tit_h3"><!-- <img alt="" src="images/pdp/promotional/pdp_kbcard_100_230328.png?$staticlink$" /> --><img alt="" src="https://www.samsonite.co.kr/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/default/dw027b2a1c/images/pdp/kb_img/pdp_kbcard_100_230328.png" /><br />
+<br />
+<b>KB국민카드 최대 5만원 즉시할인 혜택 안내</b></h3>
+&nbsp;
+
+<dl class="kb_list">
+	<dt>행사 기간</dt>
+	<dd>2025년 6월 1일 ~ 2025년 6월 30일</dd>
+	<dt>대상 카드</dt>
+	<dd>KB국민 카드회원(KB기업, 비씨, 선불카드 제외)</dd>
+	<dt>혜택</dt>
+	<dd>쌤소나이트 온라인몰에서 KB국민 APP카드로 10/30/50/70만원 이상 결제 시 0.5/1.5/3/5만원 즉시할인</dd>
+	<dt>대상 제품</dt>
+	<dd>쌤소나이트 온라인몰 전 제품 (※일부 제품에 한하여 사용이 제한될 수 있습니다.)</dd>
+	<dt>사용 방법</dt>
+	<dd>신용카드 선택 &rarr; KB국민 APP카드 선택 &rarr; 즉시할인 쿠폰선택(결제 금액에 반영 여부 확인) &rarr; 결제</dd>
+</dl>
+
+<dl class="kb_caution">
+	<dt>유의사항</dt>
+	<dd>
+	<ul class="kb_caution_list">
+		<li>예산 소진시 조기 종료될 수 있습니다.</li>
+		<li>기업, 비씨, 선불카드 등 일부카드 및 간편결제수단(네이버페이, 카카오페이, 토스 등) 제외됩니다.</li>
+		<li>결제 시 즉시할인 쿠폰을 반드시 선택하셔야 할인이 적용됩니다.</li>
+		<li>즉시할인이 적용된 실 결제금액은 카드사 승인 금액으로 확인해주세요.</li>
+		<li>주문 취소 또는 부분 취소로 인해 할인 조건에 부합하지 않을 경우, 적용된 할인 금액은 환불금액에서 차감됩니다.</li>
+		<li>상위 구간 즉시 할인 적용 후, 부분 취소로 하위 구간 승인 액에 해당되는 경우, 해당 구간 혜택은 적용되지 않으며, 기존 받으신 상위 구간 혜택도 취소됩니다. (Ex. 10/30만원 이상 0.5/1.5만원 즉시할인 적용 시 30만원 이상 구매 후 부분 취소로 10만원 구간에 해당 될 경우, 0.5만원 쿠폰 제공 불가 및 기존 1.5만원 쿠폰 취소)</li>
+		<li><b>상환능력에 비해 신용카드 사용액이 과도할 경우 귀하의 개인신용평점이 하락할 수 있습니다.</b></li>
+		<li><b>개인신용평점 하락 시 금융거래 관련된 불이익이 발생할 수 있습니다.</b></li>
+		<li><b>일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</b></li>
+		<li>신용카드 발급이 부적격한 경우(개인신용평점 낮음, 연체금 보유 등) 카드발급이 제한 될 수 있습니다.</li>
+		<li>계약을 체결하기 전에 상품설명서와 약관을 확인하시기 바랍니다.</li>
+		<li>금융소비자는 금소법 제 19조 제1항에 따라 해당상품 또는 서비스에 대하여 설명을 받을 권리가 있으며, 그 설명을 듣고 내용을 충분히 이해한 후 거래하시기 바랍니다.</li>
+		<li>카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환합니다.</li>
+		<li>문의처: 쌤소나이트 고객센터 02)567-2486</li>
+		<li>준법감시인심의필 250107-00054-HPM(2025.01.07~2026.01.06)</li>
+		<li>※ 본 프로모션은 KB국민카드 영업정책 및 제휴업체 사정으로 변경 또는 중단될 수 있습니다.</li>
+	</ul>
+	</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" defer>
+    window.addEventListener('DOMContentLoaded', function () {
+        $("#pdp-promotion-message-popup_2").appendTo("body");
+    });
+</script>
