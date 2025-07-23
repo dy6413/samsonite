@@ -1,0 +1,58 @@
+<style type="text/css">
+  @media screen and (max-width: 767px) {.mobile-hidden {display: none !important;}}
+  @media screen and (min-width: 766px) {.desktop-hidden {display: none !important;}}
+</style>
+<!-- web -->
+<div class="mobile-hidden">
+  <div style="position: relative;">
+    <img alt="" src="images/promotion/2025/0729_notice/250711_SO_notice_membership.jpg?$staticlink$" />
+    <a style="position: absolute;top: 79.85%;left: 24.59%;width: 49.32%;height: 5.45%;" href="https://www.samsonite.co.kr/member-regulations.html" title="멤버십 이용약관 페이지로 이동"></a>
+  </div>
+</div>
+<!-- mobile -->
+<div class="desktop-hidden">
+  <div style="position: relative;">
+    <img alt="" src="images/promotion/2025/0729_notice/250711_SO_notice_membership_mo.jpg?$staticlink$" />
+    <a style="position: absolute; top: 79.88%; left: 21.74%; width: 56.90%; height: 5.66%;" href="https://www.samsonite.co.kr/member-regulations.html" title="멤버십 이용약관 페이지로 이동"></a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    // 이미지와 source 태그의 srcset 변환
+    const images = document.querySelectorAll('img');
+    const sources = document.querySelectorAll('source');
+
+    images.forEach((img) => {
+        if (img.src && img.src.includes('images/promotion')) {
+            img.src = 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dweedd36f7/images/promotion/' + img.src.split('images/promotion')[1];
+        }
+    });
+
+    sources.forEach((source) => {
+        // source의 data-device 속성 변환 (srcset)
+        if (source.srcset && source.srcset.includes('images/promotion')) {
+            source.srcset = 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dweedd36f7/images/promotion/' + source.srcset.split('images/promotion')[1];
+        }
+        
+        // data-device 속성도 수정 (필요한 경우)
+        if (source.dataset.device && source.dataset.device === 'mobile') {
+            // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+            source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+        }
+    });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+    if (path.includes('images/promotion')) {
+        source.srcset = source.srcset.replace(path, 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dweedd36f7/images/promotion/' + path.split('images/promotion')[1]);
+    }
+});
+</script>
