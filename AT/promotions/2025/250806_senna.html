@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/newGlobal.css">
+  <link rel="stylesheet" href="../../css/newSearch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+  <style type="text/css">
+  @media screen and (max-width: 767px) {.mobile-hidden {display: none !important;} .owl-theme .owl-dots .owl-dot span {width: calc((100vw / 1243) * 28); height: calc((100vw / 1243) * 28); margin-right: calc((100vw / 1243) * 20);}}
+	@media screen and (min-width: 766px) {.desktop-hidden {display: none !important;} .owl-theme .owl-dots .owl-dot span {width: min(calc((100vw / 1600) * 14), 14px); height: min(calc((100vw / 1600) * 14), 14px); margin-right: min(calc((100vw / 1600) * 10), 10px);}}
+	.mobile-hidden .conts-wrap{position: relative;width: 100%;max-width:1600px;margin: 0 auto;}
+	.desktop-hidden .conts-wrap{position: relative;/* max-width: 640px; */margin: 0 auto;}
+	.conts-wrap .video-wrap {position: relative;}
+	.conts-wrap .video {position: absolute;bottom: 0;left: 6%;width: 88%;height: auto;padding-top: 53%;}
+	.conts-wrap .video iframe {position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;}
+	.conts-wrap .hasmap-wrap {position: relative;display: block;}
+	.conts-wrap img {width: 100%;}
+	.conts-wrap .hasmap-wrap a {display: block;text-indent: -9999px;font-size: 0;overflow: hidden;background: rgba(0, 0, 0, 0);}
+  .conts-wrap .hasmap-wrap [class^='btn'] {
+    position: absolute;
+  }
+  /* Slider */
+  .slider {      
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+  /* indicator */
+  .owl-theme .slide-item {
+      position: relative;
+  }
+  .owl-theme .owl-dots,
+  .owl-theme .owl-nav {
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+  }
+  /* nav */
+  .owl-theme .owl-nav {
+      display: none;
+      margin-top: 0;
+  }
+  /* indicator */
+  .owl-theme .owl-dots {
+      position: absolute;
+      bottom: -10.25%;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+  }
+  .owl-theme .owl-dots .owl-dot {
+      display: inline-block;
+      zoom: 1;
+  }  
+  .owl-dot.active,
+  .owl-dot:focus {
+      outline: none;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+      background-color: #c0eaff;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 0.2s ease;
+      border-radius: 50%;
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+      background: #fdfca3;
+  }
+  /* custom */
+  .owl-carousel .owl-stage-outer {
+    padding: 0.8em 0;
+  }
+  .slider .owl-theme .owl-item {
+    background-color: #b6e4ff;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21);
+  }
+  .slider01 {      
+    top: 19.07%;
+  }
+  .slider02 {      
+    top: 7.95%;
+  }
+
+  
+  .mobile-hidden .conts-wrap .cont1 .btn1 {left:4.31%; top:31.98%; width:29.63%; height:57.2%;}
+  .mobile-hidden .conts-wrap .cont1 .btn2 {left:35.19%; top:31.98%; width:29.63%; height:57.2%;}
+  .mobile-hidden .conts-wrap .cont1 .btn3 {left:66.06%; top:31.98%; width:29.63%; height:57.2%;}
+
+  .desktop-hidden .conts-wrap .cont1 .btn1 {left:0.97%; top:27.23%; width:32.18%; height:57.9%;}
+  .desktop-hidden .conts-wrap .cont1 .btn2 {left:34.11%; top:27.23%; width:32.18%; height:57.9%;}
+  .desktop-hidden .conts-wrap .cont1 .btn3 {left:66.93%; top:27.23%; width:32.18%; height:57.9%;}
+</style>
+<script>
+	// 카카오톡 채널 추가하기
+	Kakao.Channel.addChannel({
+		channelPublicId: '_NzvkK'
+	});
+	// 카카오톡 채널 관계 확인하기
+	Kakao.API.request({
+	url: '/v1/api/talk/channels',
+	})
+	.then(function(response) {
+		console.log(response);
+	})
+	.catch(function(error) {
+		console.log(error);
+	});
+	</script><!-- web -->
+<div class="mobile-hidden new_year19">
+<div class="conts-wrap"><!-- 01 -->
+<div class="hasmap-wrap">
+  <img alt="AMERICAN TOURISTER. SENNA 세나 NEW COLOR COLLECTION 30% OFF 세일" src="Promotions/2025/0806_senna/pc_01.jpg?$staticlink$" />
+</div>
+<!-- 02 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 리뉴얼 컬렉션. 실용적인 디자인은 그대로, 트렌디한 컬러감으로 새롭게! SENNA의 새로운 감각을 담은 컬러가 추가되었습니다. 기존 세나 컬렉션 : SILVER GREY, PASTEL PINK, CLASIC BLUE. 신규 세나 컬렉션 : SKY BLUE, PASTEL PINK, MINT GREEN. * 신규 제품의 경우, 안감 컬러가 기존과 다르게 변경되었습니다. 안감컬러 외, 주요 기능은 버전1과 동일합니다." src="Promotions/2025/0806_senna/pc_02.jpg?$staticlink$" />
+</div>
+<!-- 03 -->
+
+<div class="hasmap-wrap cont1">
+  <img alt="SPECIAL PRICE 30% OFF. * 최대 할인 금액은 신규 가입 쿠폰과 카카오톡 플러스친구 쿠폰을 함께 적용했을 때 기준입니다." src="Promotions/2025/0806_senna/pc_03.jpg?$staticlink$" />
+  <a class="btn1" href="$url('Product-Show','pid','at-157095-1562')$">기내용 : 20인치, 사이즈 : 55cm * 36cm * 24cm, 무게 : 2.8kg. 정상가 129,000원, 할인가 90,000원, 쿠폰 최대 적용가 76,500원. * 기내용은 확장 불가능</a>
+  <a class="btn2" href="$url('Product-Show','pid','at-157096-8959')$">중형 : 25인치, 사이즈 : 69cm * 47cm * 31cm, 무게 : 4kg. 정상가 179,000원, 할인가 125,000원, 쿠폰 최대 적용가 107,500원. * 확장 시 폭 34cm</a>
+  <a class="btn3" href="$url('Product-Show','pid','at-157098-1809')$">대형 : 29인치, 사이즈 : 80cm * 54cm * 36cm, 무게 : 4.9kg. 정상가 199,000원, 할인가 139,000원, 쿠폰 최대 적용가 120,100원. * 확장 시 폭 39cm</a>
+</div>
+<!-- 04 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 추가 할인 쿠폰, 신규 회원 전용 10% / 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립 / 카카오톡 친구 추가 시 5,000원 플친 전용 쿠폰" src="Promotions/2025/0806_senna/pc_04.jpg?$staticlink$" /> 
+  <a href="https://www.americantourister.co.kr/register" style="position: absolute; left:26.94%; top: 40.82%; width:14.5%; height: 6.4%;">회원가입 하러가기</a>  
+  <a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" style="position: absolute; left:42.88%; top: 76.85%; width:14.5%; height: 6.51%;"target="_blank" title="새 창">카카오 플러스 채널추가</a>
+</div>
+<!-- 05 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA DETAIL. 1. 핸들에 거치형 홀더 탑재. SENNA 기내용 캐리어는 휴대폰을 안정적으로 세워두고 콘텐츠를 감상할 수 있어요. 2. 심플한 디자인, 입체적인 다이아몬드 패턴. 유행을 타지 않는 디자인으로 어떤 여행에도 자연스럽게 어울립니다. 3. 더 담을 수 있는 여유 최대 3cm 확장 기능. SENNA 중형 · 대형 캐리어는 최대 3cm까지 확장 가능해, 쇼핑한 기념품이나 예기치 않은 짐까지 여유 있게 수납할 수 있어요. 4. 어떤 길에서도 부드럽게 360° 더블 휠. 공항 바닥부터 자갈길까지 자유롭게 이동 가능 합니다. 짐이 많아도 끌리는 스트레스 없이, 여행이 훨씬 가볍게 느껴질 거예요." src="Promotions/2025/0806_senna/pc_05.jpg?$staticlink$" /> 
+</div>
+<!-- 06 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 포토리뷰. 1. 가볍고 이쁜 핑크색 캐리어 기내용 추천!! 항상 색깔 있는 캐리어를 가지고 싶었는데 스크래치가 날 걱정에 무난한 검정색을 구매하곤 했었는데요. 이번 추석을 맞이해 나를 위한 선물로 핑크색 캐리어를 구매했습니다! 평소에 너무 사고 싶었던 핑크색 캐리어 중에서도 은은한 핑크색이 도는 이 제품으로 선택했어요!! 너무 튀지도 않고 은은하니 이쁘고 무엇보다 너무 가벼워서 국내여행은 물론 해외여 행 짧게 갈 때도 들고가기 너무 좋을 것 같아요! 올해 최고의 쇼핑이 된것 같아 기분이 너무 좋습니다~~ 2. 봄처럼 포근한 캐리어. 항상 믿고 구매하는 아메리칸 투어리스터인데요. 위탁 수하물용으로 봄 느낌나는 캐리어를 구매했어요. 웜톤 벚꽃 생각나는 인디 핑크색입니다. 비슷한 사이즈가 있는데 가로길이가 더 길어서 좀 더 크게 느껴져요. 손잡이를 당기면 늘어나서 공간이 생기고 가로로 돌려서 들 때 반대편 바닥에 직접 닿지 않게 받침 역할 해주는게 붙어있는데 만족스럽습니다. 3. 예쁜 캐리어 저렴하게 구매했네요~.  세나 20인치를 기존에 사용 중이었어요. 만족도가 높아 25인치 추가 구매합니다. 구매 시 중점을 두었던 부분은 확장 가능, 바퀴 휠 360도 회전, 하드 케이스지만 상대적으로 가벼울 것, 어느정도 색상이 있어서 수화물 찾을 때 눈에 띌 것, 외관 플라스틱에 스크래치나 오염에 강할것! (미끌거리면 스크레치가 더 잘보이고 오염도도 높더라구요. 이건 오돌도톨해서 상대적으로 적습니다.) 기본 하드 케이스와 동일한 내부 구성이예요. 20인치와 차이점은, 손잡이에 홀드(쇼핑백등을 걸수 있는 고리)가 없다는 것입니다. 대신 확장, 그리고 가로 넓은 사이드에 손잡이가 있다는 점이 장점이예요. 추천합니다." src="Promotions/2025/0806_senna/pc_06_01.jpg?$staticlink$" />
+
+  <div class="slider slider01">
+    <div class="owl-carousel owl-theme" data-slider-settings='{"items": 3.9, "loop": true, "dots": true, "nav": false, "center": true, "margin": 30}'>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_1.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_2.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_3.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_4.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_5.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_6.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_7.jpg?$staticlink$" /></div>
+    </div>
+  </div>
+</div>
+<!-- PC 공통배너 -->
+
+<div class="hasmap-wrap2" style="position:relative;">
+  <img alt="REVIEW EVENT" src="Promotions/00_footer/0709_footer_pc.jpg?$staticlink$" />
+  <a href="$url('Search-Show','cgid','atev_25_reviewevent')$" style="position: absolute; left: 26.5%; top: 86%; width: 47%; height: 9%; font-size:0; text-indent: -99999px;">리뷰이벤트 자세히 보기</a>
+</div>
+<!-- //PC 공통배너 -->
+</div>
+</div>
+<!-- // web --><!-- mobile -->
+
+<div class="desktop-hidden m_new_year19">
+<div class="conts-wrap"><!-- 01 -->
+<div class="hasmap-wrap">
+  <img alt="AMERICAN TOURISTER. SENNA 세나 NEW COLOR COLLECTION 30% OFF 세일" src="Promotions/2025/0806_senna/mo_01.jpg?$staticlink$" />
+</div>
+<!-- 02 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 리뉴얼 컬렉션. 실용적인 디자인은 그대로, 트렌디한 컬러감으로 새롭게! SENNA의 새로운 감각을 담은 컬러가 추가되었습니다. 기존 세나 컬렉션 : SILVER GREY, PASTEL PINK, CLASIC BLUE. 신규 세나 컬렉션 : SKY BLUE, PASTEL PINK, MINT GREEN. * 신규 제품의 경우, 안감 컬러가 기존과 다르게 변경되었습니다. 안감컬러 외, 주요 기능은 버전1과 동일합니다." src="Promotions/2025/0806_senna/mo_02.jpg?$staticlink$" />
+</div>
+<!-- 03 -->
+
+<div class="hasmap-wrap cont1">
+  <img alt="SPECIAL PRICE 30% OFF. * 최대 할인 금액은 신규 가입 쿠폰과 카카오톡 플러스친구 쿠폰을 함께 적용했을 때 기준입니다." src="Promotions/2025/0806_senna/mo_03.jpg?$staticlink$" />
+  <a class="btn1" href="$url('Product-Show','pid','at-157095-1562')$">기내용 : 20인치, 사이즈 : 55cm * 36cm * 24cm, 무게 : 2.8kg. 정상가 129,000원, 할인가 90,000원, 쿠폰 최대 적용가 76,500원. * 기내용은 확장 불가능</a>
+  <a class="btn2" href="$url('Product-Show','pid','at-157096-8959')$">중형 : 25인치, 사이즈 : 69cm * 47cm * 31cm, 무게 : 4kg. 정상가 179,000원, 할인가 125,000원, 쿠폰 최대 적용가 107,500원. * 확장 시 폭 34cm</a>
+  <a class="btn3" href="$url('Product-Show','pid','at-157098-1809')$">대형 : 29인치, 사이즈 : 80cm * 54cm * 36cm, 무게 : 4.9kg. 정상가 199,000원, 할인가 139,000원, 쿠폰 최대 적용가 120,100원. * 확장 시 폭 39cm</a>
+</div>
+<!-- 04 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 추가 할인 쿠폰, 신규 회원 전용 10% / 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립 / 카카오톡 친구 추가 시 5,000원 플친 전용 쿠폰" src="Promotions/2025/0806_senna/mo_04.jpg?$staticlink$" /> 
+  <a href="https://www.americantourister.co.kr/register" style="position: absolute;left: 14.09%; top: 39.5%; width: 26.79%; height: 6.04%;">회원가입 하러가기</a>  
+  <a href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" style="position: absolute; left:36.85%; top: 73.97%; width:26.39%; height:6.14%;" target="_blank" title="새 창">카카오 플러스 채널추가</a>
+</div>
+<!-- 05 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA DETAIL. 1. 핸들에 거치형 홀더 탑재. SENNA 기내용 캐리어는 휴대폰을 안정적으로 세워두고 콘텐츠를 감상할 수 있어요. 2. 심플한 디자인, 입체적인 다이아몬드 패턴. 유행을 타지 않는 디자인으로 어떤 여행에도 자연스럽게 어울립니다. 3. 더 담을 수 있는 여유 최대 3cm 확장 기능. SENNA 중형 · 대형 캐리어는 최대 3cm까지 확장 가능해, 쇼핑한 기념품이나 예기치 않은 짐까지 여유 있게 수납할 수 있어요. 4. 어떤 길에서도 부드럽게 360° 더블 휠. 공항 바닥부터 자갈길까지 자유롭게 이동 가능 합니다. 짐이 많아도 끌리는 스트레스 없이, 여행이 훨씬 가볍게 느껴질 거예요." src="Promotions/2025/0806_senna/mo_05.jpg?$staticlink$" /> 
+</div>
+<!-- 06 -->
+
+<div class="hasmap-wrap">
+  <img alt="SENNA 포토리뷰. 1. 가볍고 이쁜 핑크색 캐리어 기내용 추천!! 항상 색깔 있는 캐리어를 가지고 싶었는데 스크래치가 날 걱정에 무난한 검정색을 구매하곤 했었는데요. 이번 추석을 맞이해 나를 위한 선물로 핑크색 캐리어를 구매했습니다! 평소에 너무 사고 싶었던 핑크색 캐리어 중에서도 은은한 핑크색이 도는 이 제품으로 선택했어요!! 너무 튀지도 않고 은은하니 이쁘고 무엇보다 너무 가벼워서 국내여행은 물론 해외여 행 짧게 갈 때도 들고가기 너무 좋을 것 같아요! 올해 최고의 쇼핑이 된것 같아 기분이 너무 좋습니다~~ 2. 봄처럼 포근한 캐리어. 항상 믿고 구매하는 아메리칸 투어리스터인데요. 위탁 수하물용으로 봄 느낌나는 캐리어를 구매했어요. 웜톤 벚꽃 생각나는 인디 핑크색입니다. 비슷한 사이즈가 있는데 가로길이가 더 길어서 좀 더 크게 느껴져요. 손잡이를 당기면 늘어나서 공간이 생기고 가로로 돌려서 들 때 반대편 바닥에 직접 닿지 않게 받침 역할 해주는게 붙어있는데 만족스럽습니다. 3. 예쁜 캐리어 저렴하게 구매했네요~.  세나 20인치를 기존에 사용 중이었어요. 만족도가 높아 25인치 추가 구매합니다. 구매 시 중점을 두었던 부분은 확장 가능, 바퀴 휠 360도 회전, 하드 케이스지만 상대적으로 가벼울 것, 어느정도 색상이 있어서 수화물 찾을 때 눈에 띌 것, 외관 플라스틱에 스크래치나 오염에 강할것! (미끌거리면 스크레치가 더 잘보이고 오염도도 높더라구요. 이건 오돌도톨해서 상대적으로 적습니다.) 기본 하드 케이스와 동일한 내부 구성이예요. 20인치와 차이점은, 손잡이에 홀드(쇼핑백등을 걸수 있는 고리)가 없다는 것입니다. 대신 확장, 그리고 가로 넓은 사이드에 손잡이가 있다는 점이 장점이예요. 추천합니다." src="Promotions/2025/0806_senna/mo_06.jpg?$staticlink$" />
+
+  <div class="slider slider02">
+    <div class="owl-carousel owl-theme" data-slider-settings='{"items": 1.9, "loop": true, "dots": true, "nav": false, "center": true, "margin": 45}'>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_1.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_2.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_3.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_4.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_5.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_6.jpg?$staticlink$" /></div>
+      <div class="slide-item"><img alt="" src="Promotions/2025/0806_senna/pc_06_7.jpg?$staticlink$" /></div>
+    </div>
+  </div>
+</div>
+<!-- 모바일 공통배너 -->
+
+<div class="hasmap-wrap2" style="position:relative;">
+  <img alt="REVIEW EVENT" src="Promotions/00_footer/0709_footer_mo.jpg?$staticlink$" />
+  <a href="$url('Search-Show','cgid','atev_25_reviewevent')$" style="position: absolute; left:13%; top: 85.5%; width:74%; height:9.5%; font-size:0; text-indent: -99999px;">리뷰이벤트 자세히 보기</a>
+</div>
+<!-- //모바일 공통배너 -->
+</div>
+</div>
+<!--//mobile-->
+
+
+
+
+
+
+
+
+<!-- 슬라이더 -->
+<script>
+  $(document).ready(function(){
+    $(".slider01 .owl-carousel").owlCarousel({'items': 3.9, 'loop': true, 'dots': true, 'nav': false, 'center': true, 'margin': 30});
+    $(".slider02 .owl-carousel").owlCarousel({'items': 1.9, 'loop': true, 'dots': true, 'nav': false, 'center': true, 'margin': 45});
+});
+</script>
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    // 이미지와 source 태그의 srcset 변환
+    const images = document.querySelectorAll('img');
+    const sources = document.querySelectorAll('source');
+
+    images.forEach((img) => {
+        if (img.src && img.src.includes('Promotions')) {
+            img.src = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dw2fde40ab/Promotions/' + img.src.split('Promotions')[1];
+        }
+    });
+
+    sources.forEach((source) => {
+        // source의 data-device 속성 변환 (srcset)
+        if (source.srcset && source.srcset.includes('Promotions')) {
+            source.srcset = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dw2fde40ab/Promotions/' + source.srcset.split('Promotions')[1];
+        }
+        
+        // data-device 속성도 수정 (필요한 경우)
+        if (source.dataset.device && source.dataset.device === 'mobile') {
+            // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+            source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+        }
+    });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+    if (path.includes('Promotions')) {
+        source.srcset = source.srcset.replace(path, 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dw2fde40ab/Promotions/' + path.split('Promotions')[1]);
+    }
+});
+</script>
+
+
+
+</body>
+</html>
