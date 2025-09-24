@@ -1,0 +1,949 @@
+<style>
+	@font-face {
+		font-family: 'GT-America-Extended-Bold';
+		src: url('fonts/GT-America-Extended-Bold.woff2?$staticlink$');
+		src: local('GT-America-Extended-Bold'),
+			url('fonts/GT-America-Extended-Bold.woff2?$staticlink$') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'GT-America-Medium';
+		src: url('fonts/GT-America-Medium.woff2?$staticlink$');
+		src: local('GT-America-Extended-Bold'),
+			url('fonts/GT-America-Medium.woff2?$staticlink$') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'GT-America';
+		src: url('fonts/GT-America.woff2?$staticlink$');
+		src: local('GT-America-Extended-Bold'),
+			url('fonts/GT-America.woff2?$staticlink$') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	.section.search-results {
+		display: none;
+	}
+
+	.noresult-recommendations {
+		display: none;
+	}
+
+	.product-list-campaign {
+		display: none;
+	}
+
+	.promotion-wrapper .content-slot-wrapper {
+		padding: 0;
+	}
+
+	.paralux-lp img,
+	.paralux-lp video,
+	.paralux-lp iframe {
+		width: 100%;
+
+	}
+
+	/* Video banner */
+	.section-1 iframe {
+		height: 178vw;
+	}
+
+	.section-1 .play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-family: "GT-America-Extended-Bold" !important;
+		font-size: 10.5px;
+		text-align: center;
+		cursor: pointer;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s;
+	}
+
+	.section-1 .play-button.hide {
+		opacity: 0;
+	}
+
+	.section-1 .play-button img {
+		width: 83px;
+	}
+
+	.section-1 .play-button p {
+		color: white;
+	}
+
+	.section-1 .popup-video {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.8);
+		z-index: 10000;
+	}
+
+	.section-1 .popup-video .video {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 90vw;
+		max-height: 90vh;
+		transform: translate(-50%, -50%);
+	}
+
+	.section-1 .popup-video .close-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		font-size: 18px;
+		line-height: 50px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+
+
+	.hide-mb {
+		display: none;
+	}
+
+	.hide-dt {
+		display: block;
+	}
+
+	/*Section 2 */
+	.section-2 {
+		margin-top: -2vw;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 80px 20px;
+		min-height: 100vh;
+		text-align: center;
+		color: white;
+		overflow: hidden;
+	}
+
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+
+	.background-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.content-wrapper {
+		position: relative;
+		z-index: 1;
+		max-width: 100%;
+		margin: 0 auto;
+		margin-top: -15%;
+	}
+
+	.section-title {
+		font-family: "GT-America-Extended-Bold" !important;
+		font-size: 2.5rem;
+		font-weight: 600;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	.intro-text {
+		font-family: "GT-America" !important;
+		font-style: italic;
+		font-weight: 200;
+		font-size: 11vw;
+		margin-left: -10vw;
+	}
+
+	.highlight {
+		font-weight: 700;
+		display: block;
+		font-size: 11vw;
+		margin-right: -38vw;
+	}
+
+	.section-subtitle {
+		font-family: "GT-America" !important;
+		font-size: 5vw;
+		margin-bottom: 25px;
+		margin-top: 30px;
+		letter-spacing: 2vw;
+		width: auto;
+	}
+
+	.section-description {
+		font-size: 4.5vw;
+		line-height: 1.6;
+		width: 80%;
+		color: #f0f0f0;
+		margin: 10vw auto;
+	}
+
+	.section-ending {
+		font-size: 4.5vw;
+
+		margin-top: 30px;
+	}
+
+	.section-3-header {
+		font-family: "GT-America-Extended-Bold" !important;
+		margin-top: 8vw;
+		text-align: center;
+		font-size: 8vw;
+		font-weight: 600;
+	}
+
+	.section-3 .product-list {
+		display: none;
+	}
+
+	.section-3-swiper {
+		display: block;
+	}
+
+	.swiper-slide {
+		background-color: white;
+		text-align: center;
+		padding: 4vw 2vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.swiper-slide img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.swiper-slide h3 {
+		font-family: "GT-America-Extended-Bold" !important;
+		font-size: 1rem;
+		margin-top: 2vw;
+	}
+
+	.swiper-slide .cta-product {
+		font-family: "GT-America-Extended-Bold" !important;
+		background-color: black;
+		color: white;
+		border: none;
+		padding: 3vw;
+		margin-top: 4vw;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		content: "";
+		top: 45%;
+
+	}
+
+	.section-3 .swiper .swiper-button-next::before {
+		top: 40%;
+		content: url('images/content/2025-lp-paralux/Right-Arrow.png?$staticlink$');
+
+	}
+
+	.section-3 .swiper .swiper-button-prev::before {
+		top: 40%;
+		content: url('images/content/2025-lp-paralux/Left-Arrow.png?$staticlink$');
+
+	}
+
+	.section-3 .swiper .swiper-button-next::after {
+		top: 40%;
+		content: "";
+
+	}
+
+	.section-3 .swiper .swiper-button-prev::after {
+		top: 40%;
+		content: "";
+
+	}
+
+	.swiper-button-next {
+		right: 20vw;
+	}
+
+	.swiper-button-prev {
+		left: 20vw;
+	}
+
+	.cta-product {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.5s ease;
+	}
+
+	.swiper-slide-active .cta-product {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.cta-product {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.swiper-slide-active .cta-product {
+		opacity: 1;
+	}
+
+	.packed-innovation {
+		margin-top: 15vw;
+	}
+
+	.packed-innovation .title {
+		font-family: "GT-America-Extended-Bold" !important;
+		text-align: center;
+		font-weight: 700;
+		font-size: 9vw;
+		margin-bottom: 10vw;
+	}
+
+	.innovation-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.innovation-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.innovation-item .item-title {
+		font-family: "GT-America-Extended-Bold" !important;
+		text-align: center;
+		font-size: 5vw;
+		width: 70%;
+		font-weight: 600;
+		margin: 4vw 0;
+	}
+
+	.innovation-item .item-desc {
+		font-family: "GT-America-Extended-Bold" !important;
+		font-size: 4vw;
+		text-align: center;
+		width: 80%;
+		align-items: center;
+	}
+
+	.section-5 {
+		margin-top: 5vw;
+		margin-bottom: 20vw;
+	}
+
+	.section-5 .desc-title {
+		font-family: "GT-America" !important;
+		position: absolute;
+		font-style: italic;
+		font-weight: 200;
+		font-size: 10vw;
+		left: 9vw;
+		margin-top: -7vw;
+	}
+
+	.section-5 .text-highlight {
+		font-family: "GT-America-Extended-Bold" !important;
+		position: absolute;
+		font-size: 10vw;
+		left: 25vw;
+		font-weight: 600;
+		margin-top: 2vw;
+	}
+
+	.video-grid {
+		display: none;
+	}
+
+	.section-7 .text {
+		font-family: "GT-America-Extended-Bold" !important;
+		text-align: center;
+		font-size: 8.5vw;
+		font-weight: 600;
+		margin-bottom: 9vw;
+	}
+
+	.discount-banner {
+		margin: 12vw auto;
+		padding: 0 30px;
+	}
+
+	/*animation*/
+	.has-animation {
+		opacity: 0;
+	}
+
+	.paralux-lp .has-animation.load-animation {
+		opacity: 1;
+		animation: customFadeInUp 1.5s;
+	}
+
+	@media screen and (min-width: 768px) {
+
+		/* Video banner */
+
+		.section-1 iframe {
+			height: 56.25vw;
+		}
+
+		.search-results-wrapper:has(.noresult-recommendations) .container {
+			max-width: none;
+		}
+
+		.hide-mb {
+			display: block;
+		}
+
+		.hide-dt {
+			display: none;
+		}
+
+		/*Section 2 */
+		.content-wrapper {
+			margin-top: 15vw;
+		}
+
+		.section-title {
+			font-size: 1.8rem;
+			margin-top: -17vw;
+		}
+
+		.intro-text {
+			font-style: italic;
+			font-weight: 100;
+			font-size: 7vw;
+			margin-left: -10vw;
+		}
+
+		.highlight {
+
+			font-weight: 500;
+			display: block;
+			font-size: 8vw;
+			margin-right: -24vw;
+			margin-top: -2vw;
+
+		}
+
+		.section-subtitle {
+			font-size: 2vw;
+			letter-spacing: 1.75vw;
+			margin-right: -8vw;
+			font-weight: 100;
+		}
+
+		.section-description {
+			font-size: 1.25vw;
+			margin: 3vw auto;
+		}
+
+		.section-ending {
+			font-size: 1.25vw;
+
+		}
+
+
+		.cta-product {
+			display: block;
+			opacity: 1;
+		}
+
+		.section-3 {
+			height: 60%;
+
+		}
+
+		.section-3-header {
+			text-align: center;
+			margin-top: 2vw;
+			margin-bottom: 3vw;
+			font-size: 2vw;
+			background-color: white;
+			font-weight: 500;
+		}
+
+		.section-3 .product-list {
+			display: flex;
+			margin: 0 3vw;
+		}
+
+
+		.section-3 .product-item {
+			padding: 1vw;
+			text-align: center;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 0;
+		}
+
+		.section-3 .product-item h3 {
+			font-family: "GT-America-Extended-Bold" !important;
+			margin-top: 1vw;
+			font-size: 1.25rem;
+		}
+
+		.section-3 .cta-product {
+			font-family: "GT-America-Extended-Bold" !important;
+			color: white;
+			background-color: black;
+			text-align: center;
+			margin-top: 2vw;
+			margin-bottom: 2vw;
+			padding: 0.75vw 4vw;
+			cursor: pointer;
+
+		}
+
+		.section-3-swiper,
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: none !important;
+		}
+
+		/* Section 4 */
+		.packed-innovation {
+			margin-top: 2vw;
+		}
+
+		.packed-innovation .title {
+			text-align: center;
+			font-size: 2.75vw;
+			font-weight: 600;
+			margin-bottom: 2vw;
+		}
+
+		.innovation-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 24px;
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+
+		.innovation-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.innovation-item .item-title {
+			width: 100%;
+			text-align: center;
+			font-size: 1.25vw;
+			font-weight: 600;
+			margin: 1vw 0;
+		}
+
+		.innovation-item .item-desc {
+			font-size: 1vw;
+			text-align: center;
+			width: 75%;
+			align-items: center;
+		}
+
+		.section-5 {
+			margin-top: 5vw;
+			margin-bottom: 10vw;
+		}
+
+		.section-5 .desc-title {
+			position: absolute;
+			font-style: italic;
+			font-weight: 200;
+			font-size: 6vw;
+			left: 20vw;
+			margin-top: -4vw;
+		}
+
+		.section-5 .text-highlight {
+			position: absolute;
+			font-size: 6vw;
+			left: 35vw;
+			font-weight: 600;
+			margin-top: 2vw;
+		}
+
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 24px;
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+
+		.swiper .section-6-swiper {
+			display: none;
+		}
+
+		.section-7 {
+			margin-top: 2vw;
+		}
+
+		.section-7 .text {
+			text-align: center;
+			font-size: 2.5vw;
+			margin-bottom: 5vw;
+		}
+
+		.discount-banner {
+			max-width: 960px;
+			margin: 2vw auto 5vw;
+			padding: 0;
+		}
+
+	}
+</style>
+<div class="paralux-lp">
+	<div class="section section-1">
+		<div class="banner position-relative" id="vi-video-1-container" data-video-is-playing="false">
+			<div class="embed-container">
+				<iframe id="vimeo-desktop" class="d-none d-md-block"
+					src="https://player.vimeo.com/video/1105022642?autoplay=0&muted=1&loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=0&amp;api=1&amp;player_id=vvvvimeoVideo-2121356"
+					webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" allow="autoplay"
+					data-ready="true"></iframe>
+				<iframe id="vimeo-mobile" class="d-md-none"
+					src="https://player.vimeo.com/video/1105022682?autoplay=0&muted=1&loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=0&amp;api=1&amp;player_id=vvvvimeoVideo-2180227"
+					webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" allow="autoplay"
+					data-ready="true"></iframe>
+			</div>
+			<div class="play-button">
+				<img src="images/content/2025-lp-paralux/play-button.png?$staticlink$" alt="Samsonite x Vexx"><br>
+				WATCH THE FULL VIDEO
+			</div>
+		</div>
+
+		<div class="popup-video">
+			<div class="close-button"><i class="sa-icon
+				icon-ico-close-thin"></i></div>
+			<div class="embed-container">
+				<iframe id="vi-banner-video" class="d-none d-md-block video"
+					src="https://player.vimeo.com/video/1105022642?autoplay=0&muted=1&loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1&amp;api=1&amp;player_id=vvvvimeoVideo-2121357"
+					webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" allow="autoplay"
+					data-ready="true"></iframe>
+				<iframe id="vi-banner-video-mb" class="d-md-none video"
+					src="https://player.vimeo.com/video/1105022682?autoplay=0&muted=1&loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1&amp;api=1&amp;player_id=vvvvimeoVideo-2180228"
+					webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" allow="autoplay"
+					data-ready="true"></iframe>
+			</div>
+		</div>
+	</div>
+	<section class="section-2">
+		<picture class="background-image">
+			<source srcset="images/content/2025-lp-paralux/section-2-bg-mb.jpg?$staticlink$" media="(max-width: 767px)">
+			<img src="images/content/2025-lp-paralux/section-2-bg-dt.jpg?$staticlink$" alt="Paralux Background">
+		</picture>
+
+		<div class="content-wrapper">
+			<h2 class="section-title">
+				<span class="intro-text has-animation">Introducing</span><br>
+				<span class="highlight has-animation">PARALUX</span>
+			</h2>
+
+			<h3 class="section-subtitle has-animation">PACKING
+				<strong>PERFECTED</strong>
+			</h3>
+
+			<p class="section-description has-animation">
+				수납의 미학을 완성한 마스터피스,
+				지속가능한 소재로 정교하게 완성했습니다.
+			</p>
+
+			<p class="section-description has-animation">
+				하드사이드 러기지는 전통적인 분리형 개폐 방식에, 전면 도어를 더해 수납 큐브와 소지품에 간편하게 접근할 수 있도록 설계되었습니다.
+				백과 더플백에는 여행 스타일에 맞춰 유연하게 정리할 수 있도록 섬세하게 설계된 포켓과 디테일이 담겨 있습니다.
+			</p>
+
+			<p class="section-ending has-animation">수납의 기준을 새롭게 세우다.</p>
+		</div>
+	</section>
+	<section class="section-3">
+		<div class="section-3-header has-animation">THE PARALUX
+			COLLECTION</div>
+		<div class="product-list has-animation">
+			<a href="$url('Product-Show','pid','ss-156523-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/carry-one.jpg?$staticlink$" alt="carry-one">
+				<h3>CARRY-ON</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+			<a href="$url('Product-Show','pid','ss-156525-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/medium-spinner.jpg?$staticlink$" alt="carry-one">
+				<h3>MEDIUM SPINNER</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+			<a href="$url('Product-Show','pid','ss-156526-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/larger-spinner.jpg?$staticlink$" alt="carry-one">
+				<h3>LARGE SPINNER</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+			<a href="$url('Product-Show','pid','ss-156435-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/2in1.jpg?$staticlink$" alt="carry-one">
+				<h3>2 IN 1 BACKPACK</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+			<a href="$url('Product-Show','pid','ss-156433-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/every.jpg?$staticlink$" alt="carry-one">
+				<h3>EVERYDAY BACKPACK</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+			<a href="$url('Product-Show','pid','ss-156434-1830')$" class="product-item">
+				<img src="images/content/2025-lp-paralux/weekender.jpg?$staticlink$" alt="carry-one">
+				<h3>WEEKENDER DUFFEEL</h3>
+				<button class="cta-product">SHOP NOW</button>
+			</a>
+		</div>
+		<div class="swiper section-3-swiper ">
+			<div class="swiper-wrapper ">
+				<a href="$url('Product-Show','pid','ss-156523-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/carry-one.jpg?$staticlink$" alt="carry-one">
+					<h3>CARRY-ON</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+				<a href="$url('Product-Show','pid','ss-156525-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/medium-spinner.jpg?$staticlink$" alt="medium-spinner">
+					<h3>MEDIUM SPINNER</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+				<a href="$url('Product-Show','pid','ss-156526-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/larger-spinner.jpg?$staticlink$" alt="large-spinner">
+					<h3>LARGE SPINNER</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+				<a href="$url('Product-Show','pid','ss-156435-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/2in1.jpg?$staticlink$" alt="2-in-1">
+					<h3>2 IN 1 BACKPACK</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+				<a href="$url('Product-Show','pid','ss-156433-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/every.jpg?$staticlink$" alt="everyday">
+					<h3>EVERYDAY BACKPACK</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+				<a href="$url('Product-Show','pid','ss-156434-1830')$" class="swiper-slide">
+					<img src="images/content/2025-lp-paralux/weekender.jpg?$staticlink$" alt="weekender">
+					<h3>WEEKENDER DUFFEL</h3>
+					<button class="cta-product ">SHOP NOW</button>
+				</a>
+			</div>
+
+			<!-- Optional navigation -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</section>
+	<div class="discount-banner">
+		<a class="download-coupon" 
+			  href="$url('Coupon-Download','couponCode','PARALUX','format','ajax')$">
+			<picture>
+				<source srcset="images/content/2025-lp-paralux/paralux_s_450x100_MO_10_1.jpg?$staticlink$"
+					media="(max-width: 767px)">
+				<img src="images/content/2025-lp-paralux/paralux_s_960x150_PC_10_1.jpg?$staticlink$" alt="Paralux">
+			</picture>
+		</a>
+	</div>
+	<section class="packed-innovation">
+		<h2 class="title has-animation">PACKED WITH INNOVATION</h2>
+		<div class="innovation-grid ">
+			<!-- Block 1: Video -->
+			<div class="innovation-item video">
+				<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+					<source
+						src="https://player.vimeo.com/progressive_redirect/playback/1105023283/rendition/1080p/file.mp4?loc=external&signature=1b323625c267de045de12c80553fb4a9ef367cab408dced9590547d19fdeb01e"
+						type="video/mp4">
+				</video>
+				<h3 class="item-title has-animation">SPACE SAVING DUAL
+					ACCESS</h3>
+				<p class="item-desc has-animation">익숙한 분리형 오픈 구조에
+					전면 도어를 더한 혁신적인 디자인으로,
+					수납의 자유로움을 완성했습니다.</p>
+			</div>
+
+			<!-- Block 2: Image -->
+			<div class="innovation-item">
+				<img src="images/content/2025-lp-paralux/feature-image-2.png?$staticlink$" alt>
+				<h3 class="item-title has-animation">TWO BAGS IN ONE</h3>
+				<p class="item-desc has-animation">넉넉한 메인 수납공간에 옷을 넣고,
+					숨겨진 지퍼를 열면 컴팩트한 백으로 변신해
+					일상 속 여행에 안성맞춤입니다.</p>
+			</div>
+
+			<!-- Block 3: Image -->
+			<div class="innovation-item">
+				<img src="images/content/2025-lp-paralux/feature-image-3.png?$staticlink$" alt>
+				<h3 class="item-title has-animation">REDUCING OUR IMPACT ON THE
+					PLANET</h3>
+				<p class="item-desc has-animation">Paralux 컬렉션은 제품 제작 방식을 혁신합니다.
+					더욱 친환경적인 소재를 사용하고,
+					수리 가능성을 확대함으로써 고객이 제품을 더 오래 사용할 수 있도록 지원하며, 환경에 미치는 영향을 최소화하는 노력을 하고
+					있습니다.</p>
+			</div>
+		</div>
+	</section>
+	<section class="section-5">
+		<picture class="position-relative">
+			<source srcset="images/content/2025-lp-paralux/full-collection-mb.jpg?$staticlink$"
+				media="(max-width: 767px)">
+			<img src="images/content/2025-lp-paralux/full-collection.jpg?$staticlink$" alt="Paralux Background">
+		</picture>
+		<div class="desc-title has-animation">PACKING, <br> </div>
+		<div class="text-highlight has-animation">PERFECTED.</div>
+	</section>
+	<section class="section-6 ">
+		<div class="video-grid has-animation">
+			<div class="video-item">
+				<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+					<source
+						src="https://player.vimeo.com/progressive_redirect/playback/1105022717/rendition/1080p/file.mp4?loc=external&signature=ec45bb7b05fce575bcc0c5909d2b1675e024fb33abad8fe2325bee5c28fe9877"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="video-item">
+				<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+					<source
+						src="https://player.vimeo.com/progressive_redirect/playback/1105022839/rendition/1080p/file.mp4?loc=external&signature=ef3746b2e76739fab5b43d42eb47f525fe22dd0223fe3c8d96a4f431155c7c59"
+						type="video/mp4">
+				</video>
+
+			</div>
+			<div class="video-item">
+				<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+					<source
+						src="https://player.vimeo.com/progressive_redirect/playback/1105022933/rendition/1080p/file.mp4?loc=external&signature=d572f91f71c6443bf416da90fc54aac963832b7af81b4299544f05a68f7dceb4"
+						type="video/mp4">
+				</video>
+
+			</div>
+			<div class="video-item ">
+				<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+					<source
+						src="https://player.vimeo.com/progressive_redirect/playback/1105023069/rendition/1080p/file.mp4?loc=external&signature=5590e7cf14ff12382c28a5839de0a7ecdda6e6e84139de9361a863b29bd9fb66"
+						type="video/mp4">
+				</video>
+
+			</div>
+		</div>
+		<div class="d-block d-md-none swiper section-6-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+						<source
+							src="https://player.vimeo.com/progressive_redirect/playback/1105022839/rendition/1080p/file.mp4?loc=external&signature=ef3746b2e76739fab5b43d42eb47f525fe22dd0223fe3c8d96a4f431155c7c59"
+							type="video/mp4">
+					</video>
+				</div>
+				<div class="swiper-slide">
+					<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+						<source
+							src="https://player.vimeo.com/progressive_redirect/playback/1105022839/rendition/1080p/file.mp4?loc=external&signature=ef3746b2e76739fab5b43d42eb47f525fe22dd0223fe3c8d96a4f431155c7c59"
+							type="video/mp4">
+					</video>
+				</div>
+				<div class="swiper-slide">
+					<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+						<source
+							src="https://player.vimeo.com/progressive_redirect/playback/1105022933/rendition/1080p/file.mp4?loc=external&signature=d572f91f71c6443bf416da90fc54aac963832b7af81b4299544f05a68f7dceb4"
+							type="video/mp4">
+					</video>
+				</div>
+				<div class="swiper-slide">
+					<video width="100%" height="auto" autoplay muted loop webkit-playsinline playsinline>
+						<source
+							src="https://player.vimeo.com/progressive_redirect/playback/1105023069/rendition/1080p/file.mp4?loc=external&signature=5590e7cf14ff12382c28a5839de0a7ecdda6e6e84139de9361a863b29bd9fb66"
+							type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-7">
+		<div class="text has-animation">DISCOVER THE COLLECTION</div>
+		<picture class="has-animation">
+			<source srcset="images/content/2025-lp-paralux/end-mb.jpg?$staticlink$" media="(max-width: 767px)">
+			<img src="images/content/2025-lp-paralux/end.jpg?$staticlink$" alt="Paralux
+				Background">
+		</picture>
+	</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src=https://player.vimeo.com/api/player.js></script>
+<script src="https://joekang.co/assets/cdn/jquery.vimeo.api.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+	const swiper = new Swiper('.swiper', {
+		slidesPerView: 1.8,
+		centeredSlides: true,
+		spaceBetween: 20,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+	});
+	const swiperSection6 = new Swiper('.section-6-swiper', {
+		slidesPerView: 1.8,
+		loop: false,
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+
+		const isMobile = window.innerWidth < 768;
+
+		const mobileIframe = document.getElementById('vimeo-mobile');
+		const desktopIframe = document.getElementById('vimeo-desktop');
+
+		const mobilePlayer = new Vimeo.Player(mobileIframe);
+		const desktopPlayer = new Vimeo.Player(desktopIframe);
+
+		if (isMobile) {
+			mobilePlayer.play().catch(err => {
+				console.warn('Mobile autoplay is blocked:', err);
+			});
+		} else {
+			desktopPlayer.play().catch(err => {
+				console.warn('Desktop autoplay is blocked:', err);
+			});
+		}
+	});
+
+	$('.section-1 .play-button').click(function () {
+		$('.section-1 .popup-video').show();
+	});
+	$('.section-1 .close-button').click(function () {
+		$('.section-1 .popup-video').hide();
+	});
+
+</script>
