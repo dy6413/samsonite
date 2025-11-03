@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/newGlobal.css">
+  <link rel="stylesheet" href="../../css/newSearch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+
+
+
+<style type="text/css">
+.conts-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.conts-wrap .hasmap-wrap {
+  position: relative;
+  display: block;
+}
+.conts-wrap img {
+  width: 100%;
+}
+.conts-wrap .hasmap-wrap a {
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+.conts-wrap .hasmap-wrap [class^='link'] {
+  position: absolute;
+}
+.desktop-hidden {display: none !important;} 
+
+/* custom */
+.conts-wrap .hasmap-wrap .join_btn {
+  position: absolute;
+  left: 13.02%;
+  top: 46.14%;
+  width: 26.74%;
+  height: 5.39%;
+}
+.conts-wrap .hasmap-wrap .kakao_btn {
+  position: absolute; 
+  left: 36.73%;
+  top: 75.67%;
+  width: 26.74%;
+  height: 5.49%;
+}
+
+.conts-wrap .cont02 .link {
+  width: 39.3%;
+  height: 2.28%;
+}
+.conts-wrap .cont02 .link01 {
+  top: 58.4%;
+  left: 6.63%;
+}
+.conts-wrap .cont02 .link02 {
+  top: 58.4%;
+  right: 6.63%;
+}
+.conts-wrap .cont02 .link03 {
+  top: 89.59%;
+  left: 6.63%;
+}
+.conts-wrap .cont02 .link04 {
+  top: 89.59%;
+  right: 6.63%;
+}
+
+/* countdown */
+.at-countdown-section .countdown {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.at-countdown-section .countdown .number {
+  font-family: 'Eina01-Bold', sans-serif;
+  font-size: min(calc((100vw / 860) * 80), 80px);
+}
+
+.at-countdown-section .countdown .countdown-section span {
+  display: inline-block;
+}
+
+.at-countdown-section {
+  position: absolute;
+  top: 21.27%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.at-countdown-section .countdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 min(calc((100vw / 860) * 20), 20px);
+  align-items: center;
+}
+
+.at-countdown-section .countdown-item .countdown-backgroud {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(calc((100vw / 860) * 135), 135px);
+  height: min(calc((100vw / 860) * 160), 160px);
+  font-weight: 700;
+  border-radius: min(calc((100vw / 860) * 30), 30px);
+  color: #000;
+  background: #f71818;
+}
+.at-countdown-section .countdown-item .countdown-backgroud::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(122, 13, 13, 0.2);
+  border-top-left-radius: min(calc((100vw / 860) * 30), 30px);
+  border-top-right-radius: min(calc((100vw / 860) * 30), 30px);
+}
+.at-countdown-section .countdown-item .countdown-backgroud::after {
+   display: inline-block;
+    content: '';
+    position: absolute;
+    top: 36%;
+    right: -18%;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 40px 0 #fff;
+}
+.at-countdown-section .countdown-item:last-child .countdown-backgroud:after {
+  display: none;
+}
+
+
+@media screen and (max-width: 639px) {
+  .mobile-hidden {display: none !important;} 
+  .conts-wrap .hasmap-wrap .join_btn {
+    left: 10%;
+    top: 44.12%;
+    width: 34.53%;
+    height: 4.53%;
+  }
+  .conts-wrap .hasmap-wrap .kakao_btn {
+    left: 34.53%;
+    top: 73.12%;
+    width: 30.94%;
+    height: 4.53%;
+  }
+  .conts-wrap .cont02 .link {
+    width: 39.06%;
+    height: 2.89%;
+  }
+  .conts-wrap .cont02 .link01 {
+    top: 56.2%;
+    left: 6.72%;
+  }
+  .conts-wrap .cont02 .link02 {
+    top: 56.2%;
+    right: 6.72%;
+  }
+  .conts-wrap .cont02 .link03 {
+    top: 88.4%;
+    left: 6.72%;
+  }
+  .conts-wrap .cont02 .link04 {
+    top: 88.4%;
+    right: 6.72%;
+  }
+
+  .at-countdown-section {
+    top: 19.27%;
+  }
+
+  .at-countdown-section .countdown-item {
+    padding: 0 min(calc((100vw / 640) * 15), 15px);
+  }
+
+  .at-countdown-section .countdown-item .countdown-backgroud {
+    width: min(calc((100vw / 640) * 104), 104px);
+    height: min(calc((100vw / 640) * 124), 124px);
+    border-radius: min(calc((100vw / 640) * 30), 30px);
+  }
+  .at-countdown-section .countdown-item .countdown-backgroud::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(122, 13, 13, 0.2);
+    border-top-left-radius: min(calc((100vw / 640) * 30), 30px);
+    border-top-right-radius: min(calc((100vw / 640) * 30), 30px);
+  }
+  .at-countdown-section .countdown-item .countdown-backgroud::after {
+    display: inline-block;
+      content: '';
+      position: absolute;
+      top: 32%;
+      right: -19%;
+      width: min(calc((100vw / 640) * 8), 8px);
+      height: min(calc((100vw / 640) * 8), 8px);
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 calc((100vw / 640) * 40) 0 #fff;
+  }
+  .at-countdown-section .countdown .number {
+    font-size: min(calc((100vw / 640) * 64), 64px);
+    transform: translateY(8%);
+  }
+}
+</style>
+<script>
+// 카카오톡 채널 추가하기
+Kakao.Channel.addChannel({
+  channelPublicId: '_NzvkK'
+});
+// 카카오톡 채널 관계 확인하기
+Kakao.API.request({
+url: '/v1/api/talk/channels',
+})
+.then(function(response) {
+  console.log(response);
+})
+.catch(function(error) {
+  console.log(error);
+});
+</script><!-- web -->
+<div class="conts-wrap">
+  <!-- 01 -->
+  <section class="hasmap-wrap cont01">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1103_blackfriday/mo_01.jpg?$staticlink$" media="(max-width: 639px)" >
+      <img src="Promotions/2025/1103_blackfriday/pc_01.jpg?$staticlink$" alt="AMERICANTOURISTER 아메리칸투어리스터 2025 Black Friday 50% UP TO Sale. 2025년 11월 3일 ~ 2025년 11월 28일까지"/>
+    </picture>   
+  </section>
+
+  <!-- 02 -->
+  <section class="hasmap-wrap cont02">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1103_blackfriday/mo_02_2w.jpg?$staticlink$" media="(max-width: 639px)" >
+      <img src="Promotions/2025/1103_blackfriday/pc_02_2w.jpg?$staticlink$" alt="Black Friday 혜택 1, 놓치면 끝, 이번 주 한정 특가. 2주차(2025년 11월 8일 ~ 2025년 11월 14일)"/>
+    </picture>  
+    <div class="at-countdown-section">
+      <!-- Add the targer time here (data-countdown-expire) -->
+      <div class="countdown clearfix" data-countdown-expire="2025/11/14 23:59:59">
+        <div class="countdown-event row">
+          <div class="countdown-item col-3">
+            <div class="countdown-backgroud">
+              <span class="number total-days">00</span>
+            </div>
+            <!-- <span class="text">DAYS</span> -->
+          </div>
+          <div class="countdown-item col-3">
+            <div class="countdown-backgroud">
+              <span class="number hours">00</span>
+            </div>
+            <!-- <span class="text">HOURS</span> -->
+          </div>
+          <div class=" countdown-item col-3">
+            <div class="countdown-backgroud">
+              <span class="number minutes">00</span>
+            </div>
+            <!-- <span class="text">MINUTES</span> -->
+          </div>
+          <div class=" countdown-item col-3">
+            <div class="countdown-backgroud">
+              <span class="number seconds">00</span>
+            </div>
+            <!-- <span class="text">SECONDS</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="link link01" href="$url('Product-Show','pid','at-147940-1924')$">플린트(YELLOW 2종 세트) 구매하기</a>
+    <a class="link link02" href="$url('Product-Show','pid','at-151638-8900')$">인스타곤(PEACH BLOSSOM 20인치) 구매하기</a>
+    <a class="link link03" href="$url('Product-Show','pid','at-146819-A068')$">에어로스텝(SOHO GREY 20인치) 구매하기</a>
+    <a class="link link04" href="$url('Product-Show','pid','at-151636-8365')$">인스타곤(PASTEL BLUE 20인치) 구매하기</a>
+  </section>
+
+  <!-- 03 -->
+  <section class="hasmap-wrap cont03">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1103_blackfriday/mo_03_1.jpg?$staticlink$" media="(max-width: 639px)" >
+      <img src="Promotions/2025/1103_blackfriday/pc_03.jpg?$staticlink$" alt="Black Friday 혜택 2, 스타벅스 기프티콘 선착순 증정! 증정 대상 : 결제 금액 25만원 이상 고객 100명 선착순 증정 NOTICE - 배송 완료 후 7일이 지난 (단순 반품/교환이 불가능한 시점) 고객 대상으로 기프티콘이 증정됩니다. - 사은품은 별도 안내 없이 아메리칸 투어리스터 공식 카카오톡 채널을 통해 발송되며, 발송까지 최대 3주가 소요될 수 있습니다. - 선착순 100명 소진 시, 사전 고지 없이 사은품 증정이 종료됩니다. - 쿠폰 및 포인트 사용 후 최종 결제 금액이 25만원 이상인 경우에만 사은품 증정 대상이 됩니다."/>
+    </picture> 
+  </section>
+
+  <!-- 04 -->
+  <section class="hasmap-wrap cont04">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1103_blackfriday/mo_04_1.jpg?$staticlink$" media="(max-width: 639px)" >
+      <img src="Promotions/2025/1103_blackfriday/pc_04.jpg?$staticlink$" alt="Black Friday 혜택 3, 추가 할인, 신규 회원 전용 10% / ONLY 11월에만! 네이버 페이로 결제 시, 결제금액 기준 최대 5% 추가 적립"/>
+    </picture>
+    <a class="join_btn" href="https://www.americantourister.co.kr/register">회원가입 하러가기</a>  
+    <a class="kakao_btn" href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" target="_blank" title="새 창">카카오 플러스 채널추가</a>
+  </section>  
+</div>
+ 
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    // 이미지와 source 태그의 srcset 변환
+    const images = document.querySelectorAll('img');
+    const sources = document.querySelectorAll('source');
+
+    images.forEach((img) => {
+        if (img.src && img.src.includes('Promotions')) {
+            img.src = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + img.src.split('Promotions')[1];
+        }
+    });
+
+    sources.forEach((source) => {
+        // source의 data-device 속성 변환 (srcset)
+        if (source.srcset && source.srcset.includes('Promotions')) {
+            source.srcset = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + source.srcset.split('Promotions')[1];
+        }
+        
+        // data-device 속성도 수정 (필요한 경우)
+        if (source.dataset.device && source.dataset.device === 'mobile') {
+            // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+            source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+        }
+    });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+    if (path.includes('Promotions')) {
+        source.srcset = source.srcset.replace(path, 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + path.split('Promotions')[1]);
+    }
+});
+</script>
+
+</body>
+</html>
