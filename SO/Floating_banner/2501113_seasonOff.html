@@ -1,0 +1,104 @@
+<style type="text/css">
+	/* Default and Mobile style */
+	.overlay-popup {
+		position: fixed;
+		z-index: 100;
+		color: #fff;
+		background-color: transparent;
+		left: 50%;
+		right: auto;
+		bottom: 15px;
+		top: auto;
+		transform: translateX(-50%);
+		width: 86.96vw;
+		max-width: 270px;
+		height: fit-content;
+		border-radius: 10px;
+		padding-right: 0 !important;
+	}
+	.overlay-content {
+		width: 100%;
+	}
+	.overlay-content img {
+		border-radius: 10px;
+	}
+	.close-button {
+		position: absolute;
+		z-index: 1;
+		right: 10px;
+		top: 0px;
+	}
+	.close-button .close {
+		outline: none;
+		cursor: pointer;
+		-webkit-transition: ease-in 0.3s;
+		-moz-transition: ease-in 0.3s;
+		-ms-transition: ease-in 0.3s;
+		-o-transition: ease-in 0.3s;
+		transition: ease-in 0.3s;
+	}
+	.close-button .sa-icon {
+		font-size: 0.786rem;
+	}
+	.close-button .icon-ico-close-thin::before {
+		color: #fff;
+		font-family: Samsonite-icons;
+		font-style: normal;
+		font-weight: 700;
+	}
+	/* Tablet style */
+	@media (max-width: 768px) {
+		.overlay-popup {
+			bottom: 92px !important;
+			/* width:220px; */
+			max-width: 220px;
+		}
+	}
+	/* Tablet style */
+	@media (min-width: 768px) {
+		.overlay-popup {}
+
+		.overlay-content {}
+
+		.close-button {}
+	}
+	/* PC style */
+	@media (min-width: 1200px) {
+		.overlay-popup {
+			left: auto;
+			right: 175px;
+			bottom: 15px;
+			transform: none;
+			width: 270px;
+		}
+		.overlay-content {
+
+		}
+		.close-button {
+			right: 10px;
+			top: 2px;
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.overlay-popup {
+			right: 170px;
+		}
+	}
+
+</style>
+
+<div class="modal overlay-popup" data-backdrop="false" data-keyboard="false" id="promotionPopup">
+	<div class="sticky">
+		<div class="close-button">
+			<button aria-label="Close" class="close close-popup-by-time" data-dismiss="modal" data-expiry="1" type="button">
+				<i class="sa-icon icon-ico-close-thin"></i>
+			</button>
+		</div>
+		<div class="overlay-content">
+			<a href="$url('Search-Show','cgid','soev_2511_sr_25season_off')$">
+				<img alt="" class="overlay-content-img" src="images/overlayPopup/251113_seasonoff_270x75.png?$staticlink$" title="" /> 
+			</a>						
+		</div>
+	</div>
+</div>
