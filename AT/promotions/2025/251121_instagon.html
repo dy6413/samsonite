@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/newGlobal.css">
+  <link rel="stylesheet" href="../../css/newSearch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+
+
+
+<style type="text/css">
+.conts-wrap {
+  position: relative;
+  width: 100%;
+  /* max-width: 860px; */
+  margin: 0 auto;
+}
+.conts-wrap .hasmap-wrap {
+  position: relative;
+  display: block;
+}
+.conts-wrap img {
+  width: 100%;
+}
+.conts-wrap .hasmap-wrap a {
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+.desktop-hidden {display: none !important;} 
+
+/* Slider */
+.conts-wrap .slider {      
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+/* indicator */
+.conts-wrap .owl-theme .slide-item {
+    position: relative;
+}
+.conts-wrap .owl-theme .owl-dots,
+.conts-wrap .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+/* nav */
+.conts-wrap .owl-theme .owl-nav {
+    display: none;
+    margin-top: 0;
+}
+/* dots */
+.conts-wrap .owl-theme .owl-dots {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    margin-right: 0.72%;
+}  
+.conts-wrap .owl-theme .owl-dots .owl-dot:last-child {
+    margin-right: 0; 
+}
+.conts-wrap .owl-dot.active,
+.conts-wrap .owl-dot:focus {
+    outline: none;
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot span {
+    background-color: transparent;
+    display: block;
+    transition: opacity 0.2s ease;
+    border-radius: 50%;
+    border: min(calc((100vw / 1920) * 4)) solid #65ce90;
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot span {
+    width: min(calc((100vw / 1920) * 16)); 
+    height: min(calc((100vw / 1920) * 16)); 
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot.active span,
+.conts-wrap .owl-theme .owl-dots .owl-dot:hover span {
+    background: #65ce90;
+}
+
+/* custom */
+.conts-wrap .hasmap-wrap [class^='link'] {
+  position: absolute;
+}
+.conts-wrap .cont02 .link {
+  width: 10.42%;
+  height: 4.47%;
+}
+.conts-wrap .cont02 .link01 {
+  left: 59.38%;
+  top: 38.76%;
+}
+.conts-wrap .cont02 .link02 {
+  left: 75.9%;
+  top: 38.76%;
+}
+.conts-wrap .cont02 .link03 {
+  left: 55.1%;
+  top: 87.9%;
+}
+.conts-wrap .cont02 .link04 {
+  left: 67.88%;
+  top: 87.9%;
+}
+.conts-wrap .cont02 .link05 {
+  left: 79.63%;
+  top: 87.9%;
+}
+.conts-wrap .cont03 .gif_item {
+  position: absolute;
+  width: 44.79%;
+  height: 27.85%;
+}
+.conts-wrap .cont03 .gif_item.item_01 {
+  left: 3.96%;
+  top: 19.16%;
+}
+.conts-wrap .cont03 .gif_item.item_02 {
+  left: 51.25%;
+  top: 19.16%;
+}
+.conts-wrap .cont03 .gif_item.item_03 {
+  left: 3.96%;
+  top: 66.4%;
+}
+.conts-wrap .cont03 .gif_item.item_04 {
+  left: 51.25%;
+  top: 66.4%;
+}
+.conts-wrap .cont03 .gif_item img {
+  width: 100%;
+  height: 100%;
+}
+.conts-wrap .cont05 .link {
+  width: 39.64%;
+  height: 63.86%;
+}
+.conts-wrap .cont05 .link01 {
+  left: 8.44%;
+  top: 25.18%;
+}
+.conts-wrap .cont05 .link02 {
+  left: 51.67%;
+  top: 25.18%;
+}
+.conts-wrap .cont06 .slider01 {
+  top: 19.16%;
+}
+.conts-wrap .hasmap-wrap .join_btn {
+  position: absolute;
+  left: 22.86%;
+  top: 70.69%;
+  width: 12.08%;
+  height: 10.89%;
+}
+.conts-wrap .hasmap-wrap .kakao_btn {
+  position: absolute; 
+  left: 65.1%;
+  top: 70.69%;
+  width: 11.98%;
+  height: 10.89%;
+}
+.conts-wrap .hasmap-wrap .review_btn {
+  position: absolute;
+  left: 38.28%;
+  top: 79.97%;
+  width: 23.44%;
+  height: 10.34%;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-hidden {display: none !important;} 
+  /* custom */
+  .conts-wrap .owl-theme .owl-dots .owl-dot {
+    margin-right: calc((100vw / 640) * 24);
+  }
+  .conts-wrap .owl-theme .owl-dots .owl-dot span {
+    width: calc((100vw / 640) * 27);
+    height: calc((100vw / 640) * 27);
+    border: max(calc((100vw / 640) * 4), 4px) solid #65ce90;
+  }
+  .conts-wrap .cont02 .link {
+    width:32.1%;
+    height:2.8%;
+  }
+  .conts-wrap .cont02 .link01 {
+    left:12.6%;
+    top:39.6%;
+  }
+  .conts-wrap .cont02 .link02 {
+    left:54.5%;
+    top:39.6%;
+  }
+  .conts-wrap .cont02 .link03 {
+    left:5.1%;
+    top:64.7%;
+    width: 26%;
+  }
+  .conts-wrap .cont02 .link04 {
+    left:37.7%;
+    top:64.7%;
+    width: 26%;
+  }
+  .conts-wrap .cont02 .link05 {
+    left:69.3%;
+    top:64.7%;
+    width: 26%;
+  }
+  .conts-wrap .cont03 .gif_item {
+    width: 100%;
+    height: 13.6%;
+  }
+  .conts-wrap .cont03 .gif_item.item_01 {
+    left: 0;
+    top: 4.8%;
+  }
+  .conts-wrap .cont03 .gif_item.item_02 {
+    left: 0;
+    top: 29.8%;
+  }
+  .conts-wrap .cont03 .gif_item.item_03 {
+    left: 0;
+    top: 54.5%;
+  }
+  .conts-wrap .cont03 .gif_item.item_04 {
+    left: 0;
+    top: 79.5%;
+  }
+  .conts-wrap .cont03 .gif_item img {
+    width: 100%;
+    height: 100%;
+  }
+  .conts-wrap .cont05 .link {
+    width: 92.1%;
+    height: 37.3%;
+    left: 4%;
+  }
+  .conts-wrap .cont05 .link01 {
+    top: 14.7%;
+  }
+  .conts-wrap .cont05 .link02 {
+    top: 56.3%;
+  }
+  .conts-wrap .cont06 .slider01 {
+    top: 17.36%;
+  }
+  .conts-wrap .cont06 .owl-dots {
+    bottom: -13%;
+  }
+  .conts-wrap .hasmap-wrap .join_btn {
+    left: 8.7%;
+    top: 45.3%;
+    width: 35.94%;
+    height: 7.8%;
+  }
+  .conts-wrap .hasmap-wrap .kakao_btn {
+    left: 31.8%;
+    top: 81.9%;
+    width: 35.94%;
+    height: 7.8%;
+  }
+  .conts-wrap .hasmap-wrap .review_btn {
+    left:0;
+    top:auto;
+    bottom: 0;
+    width:100%;
+    height:8.74%;
+  }
+}
+</style>
+<script>
+// 카카오톡 채널 추가하기
+Kakao.Channel.addChannel({
+  channelPublicId: '_NzvkK'
+});
+// 카카오톡 채널 관계 확인하기
+Kakao.API.request({
+url: '/v1/api/talk/channels',
+})
+.then(function(response) {
+  console.log(response);
+})
+.catch(function(error) {
+  console.log(error);
+});
+</script><!-- web -->
+<div class="conts-wrap">
+  <!-- 01 -->
+  <section class="hasmap-wrap cont01">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_01.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_01_1.jpg?$staticlink$" alt="AMERICANTOURISTER 아메리칸투어리스터 COLOR YOUR TRIP, 인스타곤 캐리어, 여행에 색을 더하다"/>
+    </picture>   
+  </section>
+
+  <!-- 02 -->
+  <section class="hasmap-wrap cont02">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_02.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_02_1.jpg?$staticlink$" alt="누적 판매량 18,000개, 아메리칸 투어리스터 베스트 셀러 캐리어. INSTAGON EXT(Expandable의 약자로 전 사이즈 확장 가능한 제품입니다) / GT(Gold Trim의 약자로 지퍼, 바퀴, 핸들이 금색 테두리로 리뉴얼 된 제품입니다)"/>
+    </picture>  
+    <a class="link link01" href="$url('Product-Show','pid','at-156287-1233')$">Cream 구매하기</a>
+    <a class="link link02" href="$url('Product-Show','pid','at-156283-1465')$">Black 구매하기(*블랙 컬러 제품의 바퀴는 금장 디자인이 아닌 일반 바퀴입니다.)</a>
+    <a class="link link03" href="$url('Product-Show','pid','at-151636-8900')$">Pastel Pink 구매하기</a>
+    <a class="link link04" href="$url('Product-Show','pid','at-156287-8365')$">Pastel Blue 구매하기</a>
+    <a class="link link05" href="$url('Product-Show','pid','at-156287-1658')$">Pastel Green 구매하기</a>
+  </section>
+
+  <!-- 03 -->
+  <section class="hasmap-wrap cont03">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_03.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_03_1.jpg?$staticlink$" alt="Detail 1, 전 사이즈, 최대 3cm 확장 가능. 필요할 때 최대 3cm까지 확장되어 여유 있는 수납이 가능합니다. / Detail 2, 최신형 TSA 잠금장치 & 이중 지퍼. 여행지에서도 든든한 보안, 아메리칸 투어리스터와 함께라면 언제나 안전한 여행이 가능합니다. / Detail 3, 대용량 수납. 25인치, 30인치 사이즈로 평균 (24인치, 29인치) 대비, 각각 약 3-4% 더 넉넉한 수납공간을 제공합니다. / Detail 4, 충격 흡수 바퀴. 더블 휠 기술로 부드러운 주행과 안정감을 제공하며 울퉁불퉁한 길도 문제 없어요."/>
+    </picture>
+    <div class="gif_item item_01">
+      <img src="Promotions/2025/1114_instagon/gif_01.gif?$staticlink$" alt=""/>
+    </div>
+      <div class="gif_item item_02">
+      <img src="Promotions/2025/1114_instagon/gif_02.gif?$staticlink$" alt=""/>
+    </div>
+      <div class="gif_item item_03">
+      <img src="Promotions/2025/1114_instagon/gif_03.gif?$staticlink$" alt=""/>
+    </div>
+      <div class="gif_item item_04">
+      <img src="Promotions/2025/1114_instagon/gif_04.gif?$staticlink$" alt=""/>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="hasmap-wrap cont04">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_04.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_04_1.jpg?$staticlink$" alt="캐리어 사이즈 측정 기준 / 1. 20인치 사이즈(size) : 55cm, 무게(weight) : 2.8kg, 용량(capacity) : 35L, 가로x세로x높이(W, D, H) : 36x24x55 / 2. 25인치 사이즈(size) : 69cm, 무게(weight) : 3.9kg, 용량(capacity) : 79L, 가로x세로x높이(W, D, H) : 48x30x69 / 3. 30인치 사이즈(size) : 81cm, 무게(weight) : 5.0kg, 용량(capacity) : 123L, 가로x세로x높이(W, D, H) : 55x34x81 / * 세로 길이는 바퀴가 포함된 사이즈 입니다. * 사이즈의 경우 측정 방법과 위치에 따라 약 1-3cm 오차가 발생할 수 있습니다."/>
+    </picture>
+  </section>
+  
+  <!-- 05 -->
+  <section class="hasmap-wrap cont05">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_05.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_05_1.jpg?$staticlink$" alt="인스타곤 스페셜 세트 / 1. 인스타곤 올인원 세트(인스타곤 + 커버 + 파우치), 정상가 240,000원, 상시가 200,000원, 세트 할인가 168,000원(30% 할인). 신규가입 쿠폰 10% 적용시 151,200원 / 2. 인스타곤 블랙 세트(기내용 20in + 중형 25in 세트), 정상가 338,000원, 상시가 270,000원, 세트 할인가 202,000원(40% 할인). 신규가입 쿠폰 10% 적용시 181,800원."/>
+    </picture>
+    <a class="link link01" href="$url('Product-Show','pid','2025-atev-instagon-3pcs-size-25')$">인스타곤 올인원 세트 자세히 보기</a>  
+    <a class="link link02" href="$url('Product-Show','pid','2025-atev-instagon-2pcs')$">인스타곤 블랙 세트 자세히 보기</a>  
+  </section>
+
+  <!-- 06 -->
+  <section class="hasmap-wrap cont06">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_06.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_06_1.jpg?$staticlink$" alt="리뷰"/>
+    </picture>
+
+    <div class="slider slider01">
+      <div class="owl-carousel owl-theme">
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_06_slide1.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="1. 제목 : 특히 바퀴가 부드럽고, 소음 거의 없습니다. / 내용 : 정말 괜찮은 상품입니다. 집앞에 놓여져 있었는데 들고 들어오는 순간 느낌이 좋았습니다. 왜냐구요? 엄청 가벼웠거든요. ㅎㅎ 상품을 개봉하는 순간 또 놀랬습니다. 색이 엄청 마음에 들었거든요. 오죽하면 가족들도 캐리어치곤 왜 이렇게 디자인이 잘 빠졌냐고...ㅎ 바퀴의 부드러움, 락 버튼, 확장, 고정 등 정말 좋네요! 특히 바퀴가 부드럽고, 소음이 거의 없습니다. 이번 코타키나발루 여행 시 사용했는데 비포장 도로임에도 진동 및 소음이 거의 발생하지 않았습니다. 여자친구도 제껄 사용해보더니 구매하겠다고 하더라구요. ㅎㅎ (제가 영업 했습니다~? ㅋㅋ) 정말 좋은 가격에 좋은 제품을 구매한 것 같아 기부니가 좋아요! / 작성자 : MAYSON" src="Promotions/2025/1114_instagon/pc_06_1_slide1.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_06_slide2.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="2. 제목 : 가방은? 아메리칸 투어리스터가 딱! / 내용 : 10년전 아메리칸 투어리스터 찐핑크 가방을 샀는데 사이즈 적당한 것을 하나 더 구입하려고 찾았는데 딱! 이 아이가 눈에 띄더라고요! 원래 가지고 있는 찐핑크 가방을 가지고 유럽을 다니다보면 가방색 때문에 눈이 딱 띄어서 가방 찾기 쉬워서 이쁜 색깔 가방을 찾고 있었고 가격이 저렴하면서도 잘 쓰일 수 있는 가방을 찾기 위해 오프라인 온라인을 많이 돌아다녔습니다. 가방은 아시죠? 아메리칸 투어리스터가 딱 입니다. / 작성자 : JOY" src="Promotions/2025/1114_instagon/pc_06_1_slide2.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_06_slide3.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="3. 제목 : 은은한 금색 포인트 너무 예뻐요! / 내용 : 피치 블라썸이랑 고민했는데 파스텔 그린으로 구매했습니다. 일단 장점은 디자인이 너무 예쁘다는 것...! 사진보다 더 예뻤어요. 쨍한 느낌의 민트도 아닌 연한 민트 느낌이라 해야할까요...? 은은한 금색으로 포인트 되어서 그런가 너무 예뻐요! 그리고 상세페이지에 3.9kg라고 나와있지만, 제가 기존에 쓰던 캐리어가 3.2kg인데 더 가벼운 느낌이었어요. / 작성자 : 치즈" src="Promotions/2025/1114_instagon/pc_06_1_slide3.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_06_slide4.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="4. 제목 : 소음도 거의 없고 힘도 덜 들어요. / 내용 : 아메리칸 투어리스터 인스타곤 81/30 캐리어, 사용해보고 솔직하게 만족했습니다. 우선 바퀴가 굉장히 부드러워서 공항이나 도로 위에서 이동할 때 소음도 거의 없고 힘도 덜 들어요. 예전에 쓰던 캐리어는 바퀴가 끊기고 끼는 경우가 많았는데, 이건 정말 스무스하게 잘 굴러갑니다. / 작성자 : 멜번아이" src="Promotions/2025/1114_instagon/pc_06_1_slide4.png?$staticlink$" />
+          </picture>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="hasmap-wrap">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_07.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_07_1.jpg?$staticlink$" alt="추가 할인, 신규 회원 전용 10% / 네이버 페이로 결제 시, 결제금액 기준 최대 5% 추가 적립 / 카카오톡 친구 추가 시 5,000원 플친 전용 쿠폰"/>
+    </picture>
+    <a class="join_btn" href="https://www.americantourister.co.kr/register">회원가입 하러가기</a>  
+    <a class="kakao_btn" href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" target="_blank" title="새 창">카카오 플러스 채널추가</a>
+  </section>    
+
+  <!-- 08 -->
+  <section class="hasmap-wrap">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1114_instagon/mo_08.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1114_instagon/pc_08_1.jpg?$staticlink$" alt="REVIEW EVENT / 리뷰를 작성해주신 모든 분들께 100% 드리는 특별한 선물! 공식몰 포토 리뷰 작성 시 스타벅스 기프티콘 추첨 증정, 네이버 블로그 리뷰 추가 작성 시 100% NEDD 슬링백 증정!"/>
+    </picture>
+    <a href="$url('Search-Show','cgid','atev_25_reviewevent')$" class="review_btn">리뷰이벤트 자세히 보기</a>
+  </section>      
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer="defer"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- slider -->
+<script>
+   window.addEventListener('DOMContentLoaded', function () {
+      $('.hasmap-wrap.cont06 .slider01 .owl-carousel').owlCarousel({
+          center: true,
+          loop: true,
+          nav: false,
+          dots: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2.1
+            }
+          }
+      })
+  })
+</script>
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    // 이미지와 source 태그의 srcset 변환
+    const images = document.querySelectorAll('img');
+    const sources = document.querySelectorAll('source');
+
+    images.forEach((img) => {
+        if (img.src && img.src.includes('Promotions')) {
+            img.src = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + img.src.split('Promotions')[1];
+        }
+    });
+
+    sources.forEach((source) => {
+        // source의 data-device 속성 변환 (srcset)
+        if (source.srcset && source.srcset.includes('Promotions')) {
+            source.srcset = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + source.srcset.split('Promotions')[1];
+        }
+        
+        // data-device 속성도 수정 (필요한 경우)
+        if (source.dataset.device && source.dataset.device === 'mobile') {
+            // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+            source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+        }
+    });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+    if (path.includes('Promotions')) {
+        source.srcset = source.srcset.replace(path, 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + path.split('Promotions')[1]);
+    }
+});
+</script>
+
+</body>
+</html>
