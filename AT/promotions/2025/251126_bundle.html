@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/newGlobal.css">
+  <link rel="stylesheet" href="../../css/newSearch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+
+
+
+<style type="text/css">
+.conts-wrap {
+  position: relative;
+  width: 100%;
+  /* max-width: 860px; */
+  margin: 0 auto;
+}
+.conts-wrap .hasmap-wrap {
+  position: relative;
+  display: block;
+}
+.conts-wrap img {
+  width: 100%;
+}
+.conts-wrap .hasmap-wrap a {
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+.conts-wrap .hasmap-wrap [class^='link'] {
+  position: absolute;
+}
+.desktop-hidden {display: none !important;} 
+
+/* Slider */
+.conts-wrap .slider {      
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+/* indicator */
+.conts-wrap .owl-theme .slide-item {
+    position: relative;
+}
+.conts-wrap .owl-theme .owl-dots,
+.conts-wrap .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+/* nav */
+.conts-wrap .owl-theme .owl-nav {
+    display: none;
+    margin-top: 0;
+}
+/* dots */
+.conts-wrap .owl-theme .owl-dots {
+    position: absolute;
+    bottom: -3%;
+    left: 52%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    margin-right: min(calc((100vw / 1920) * 15), 15px);
+}  
+.conts-wrap .owl-dot.active,
+.conts-wrap .owl-dot:focus {
+    outline: none;
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot span {
+    background-color: transparent;
+    display: block;
+    transition: opacity 0.2s ease;
+    border-radius: 50%;
+    border: min(calc((100vw / 1920) * 1)) solid #3c3c3c;
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot span {
+    width: min(calc((100vw / 1920) * 15), 15px); 
+    height: min(calc((100vw / 1920) * 15), 15px); 
+}
+.conts-wrap .owl-theme .owl-dots .owl-dot.active span,
+.conts-wrap .owl-theme .owl-dots .owl-dot:hover span {
+    background: #3c3c3c;
+}
+/* custom */
+.conts-wrap .cont02 .slider01 {
+  top: 48.27%;
+  left: 0;
+  width: 53.70%;
+}
+.conts-wrap .cont03 .slider01 {
+  top: 43.20%;
+  left: 0;
+  width: 53.70%;
+}
+.conts-wrap .cont03 .owl-dots {
+  left: 58%;
+}
+.conts-wrap .cont02 .prd_txt,
+.conts-wrap .cont03 .prd_txt {
+  position: absolute;
+  left: 0;
+  width: 53.70%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.conts-wrap .cont02 .prd_txt {top: 48.27%;}
+.conts-wrap .cont03 .prd_txt {top: 43.20%;}
+
+.conts-wrap .cont05 .link01 {bottom: 56.37%; left: 49.06%; width: 17.40%; height: 6.89%;}
+
+.conts-wrap .hasmap-wrap .join_btn {
+  position: absolute;
+  left: 33.43%;
+  top: 70.68%;
+  width: 11.97%;
+  height: 10.88%;
+}
+.conts-wrap .hasmap-wrap .review_btn {
+  position: absolute;
+  left: 38.28%;
+  top: 79.97%;
+  width: 23.44%;
+  height: 10.34%;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-hidden {display: none !important;} 
+  /* custom */
+  .conts-wrap .owl-theme .owl-dots .owl-dot {
+    margin-right: calc((100vw / 640) * 12);
+  }
+  .conts-wrap .owl-theme .owl-dots .owl-dot span {
+    width: calc((100vw / 640) * 12);
+    height: calc((100vw / 640) * 12);
+    border: min(calc((100vw / 640) * 1), 1px) solid #3c3c3c;
+  }
+  .conts-wrap .cont02 .slider01 {
+    width: 100%;
+    top: 39.75%;
+  }
+  .conts-wrap .cont03 .slider01 {
+    width: 100%;
+    top: 40.96%;
+  }
+  .conts-wrap .cont02 .owl-dots {
+    bottom: -8%;
+  }
+  .conts-wrap .cont03 .owl-dots {
+    left: 50%;
+  }
+  .conts-wrap .cont02 .prd_txt {width: 100%; top: 39.75%;}
+  .conts-wrap .cont03 .prd_txt {width: 100%; top: 40.96%;}
+
+  .conts-wrap .cont05 .link01 {bottom: 42.28%; left: 5.94%; width: 88.59%; height: 7.2%;}
+  
+  .conts-wrap .hasmap-wrap .join_btn {
+    left: 32.19%;
+    top: 45.26%;
+    width: 35.94%;
+    height: 6.22%;
+  }
+  .conts-wrap .hasmap-wrap .review_btn {
+    left:12.63%;
+    top:auto;
+    bottom: 4.8%;
+    width: 74.81%;
+    height:9.77%;
+  }
+}
+</style>
+<script>
+// 카카오톡 채널 추가하기
+Kakao.Channel.addChannel({
+  channelPublicId: '_NzvkK'
+});
+// 카카오톡 채널 관계 확인하기
+Kakao.API.request({
+url: '/v1/api/talk/channels',
+})
+.then(function(response) {
+  console.log(response);
+})
+.catch(function(error) {
+  console.log(error);
+});
+</script><!-- web -->
+<div class="conts-wrap">
+  <!-- 01 -->
+  <section class="hasmap-wrap cont01">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_01_1.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_01.jpg?$staticlink$" alt="AMERICANTOURISTER 아메리칸투어리스터 캐리어 세트"/>
+    </picture>   
+  </section>
+
+  <!-- 02 -->
+  <section class="hasmap-wrap cont02">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_02_1.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_02.jpg?$staticlink$" alt="1. INSTAGON 인스타곤 올인원 세트 / 밝은 톤의 캐리어를 사고 싶었지만, 관리가 부담스러워 늘 무채색만 선택하셨나요?  예쁜 컬러, 이제 망설이지 마세요! 인스타곤 올인원 세트는 파스텔 캐리어를 지켜줄 전용커버와, 여행 짐을 깔끔하게 정리해주는 5종 파우치 세트를 함께 제공합니다. 캐리어 : 인스타곤 중형 179,000원, 대형 : 209,000원 / 전용 커버 : 중형 23,000원, 대형 : 25,000원 / 파우치 : 38,000원. (중형 세트) 정상가 240,000원, 상시가 200,000원, 세트 할인가 30% 할인 168,000원. 신규가입 쿠폰 10% 적용시 151,200원. / (대형 세트) 정상가 272,000원, 상시가 226,000원, 세트 할인가 30% 할인 190,000원. 신규가입 쿠폰 10% 적용시 171,000원."/>
+    </picture>  
+    
+    <div class="slider slider01">
+      <div class="owl-carousel owl-theme">
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_02_prd1.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_02_prd1.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_02_prd2.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_02_prd2.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_02_prd3.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_02_prd3.png?$staticlink$" />
+          </picture>  
+        </div>
+      </div>
+    </div>
+
+    <div class="prd_txt">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_02_txt.png?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/1001_bundle/pc_fp_02_txt.png?$staticlink$" alt=""/>
+      </picture>  
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="hasmap-wrap cont03">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_1.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_03.jpg?$staticlink$" alt="2. HUNDO 훈도 + COREY 코레이 기내용 캐리어 + 더플백 세트 / 가뿐하게 떠나는 여행, 이 세트 하나면 충분해요! 컨베이어 벨트 앞에서 기다릴 필요 없이, 기내용 캐리어 하나로 바로 출발하세요. HUNDO 초경량(2.5kg) 캐리어와 COREY 더플백 세트가 여행의 짐을 가볍게 해줄거에요. 캐리어 기내용 : 119,000원, 더플백 : 79,000원. (기내용 세트) 정상가 198,000원, 상시가 180,000원, 세트 할인가 30% 할인 139,000원. 신규가입 쿠폰 10% 적용시 125,100원."/>
+    </picture> 
+    
+    <div class="slider slider01">
+      <div class="owl-carousel owl-theme">
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_prd1.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_03_prd1.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_prd2.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_03_prd2.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_prd3.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_03_prd3.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_prd4.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_03_prd4.png?$staticlink$" />
+          </picture>  
+        </div>
+        <div class="slide-item">
+          <picture>
+            <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_prd5.png?$staticlink$" media="(max-width: 767px)" >
+            <img alt="" src="Promotions/2025/1001_bundle/pc_fp_03_prd5.png?$staticlink$" />
+          </picture>  
+        </div>
+      </div>
+    </div>
+
+    <div class="prd_txt">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_03_txt.png?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/1001_bundle/pc_fp_03_txt.png?$staticlink$" alt=""/>
+      </picture>  
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="hasmap-wrap cont04">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_04_1.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_04.jpg?$staticlink$" alt="베스트 셀러 세트 / 아메리칸 투어리스터의 인기 캐리어를 원하는 컬러 조합으로 맞춰보세요. 단품보다 합리적인 가격에, 나만의 컬러 믹스로 즐길 수 있습니다. SENNA 세나 : 기내용(20in) + 대형(29in) 세트 / 정상가 328,000원, 상시가 262,000원, 세트 할인가 40% 할인 196,000원. 신규가입 쿠폰 10% 적용시 176,400원. ARGYLE 아가일 : 기내용(20in) + 대형(30in) 세트 / 정상가 368,000원, 상시가 294,000원, 세트 할인가 40% 할인 220,000원. 신규가입 쿠폰 10% 적용시 198,000원. LINEX 리넥스 : 기내용(20in) + 대형(28in) 세트 / 정상가 388,000원, 상시가 329,000원, 세트 할인가 40% 할인 232,000원. 신규가입 쿠폰 10% 적용시 208,800원."/>
+    </picture>
+  </section>
+  
+  <!-- 05 -->
+  <section class="hasmap-wrap cont05">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_05_3.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_05.jpg?$staticlink$" alt="올블랙 심플 세트 / 색상 고민까지 하기는 귀찮고, 오래오래 쓸 수 있는 캐리어를 찾고 계셨나요? 올블랙 세트 하나면 색상 고민 없이, 오래도록 실용적이고 스타일리시한 여행을 즐길 수 있습니다. SKYPARK 스카이파크 : 중형(25in) + 대형(29in) 세트 / 정상가 298,000원, 상시가 238,000원, 세트 할인가 40% 할인 178,000원. 신규가입 쿠폰 10% 적용시 160,200원. / 유의사항 · 할인의 경우 당사 사정에 따라 별도 고지 없이 가격 변경 및 종료 될 수 있습니다. · 세트 상품은 카카오톡 5,000원 쿠폰은 적용 불가하며, 그 외 쿠폰은 적용 가능합니다.· 세트 상품은 합포장이 불가하며, 각각 별도의 박스로 개별 배송됩니다. · 세트 구매 건은 부분 반품이나 단순 교환이 불가하며 반품 시 전체 반품 후 재구매 해주셔야 합니다. · 상품 불량의 경우 교환 처리가 가능하며, 반품을 원하실 경우 번거로우시더라도 전체 반품 진행이 필요합니다.(상품별 반품비 부과, 총 6,000원 청구)"/>
+    </picture>
+    <a class="link link01" href="$url('Search-Show','cgid','atev_2025_combination')$">세트 상품 보러가기</a>
+  </section>
+
+  <!-- 06 -->
+  <section class="hasmap-wrap">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_06.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_06.jpg?$staticlink$" alt="추가 할인, 신규 회원 전용 10% / 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립"/>
+    </picture>
+    <a class="join_btn" href="https://www.americantourister.co.kr/register">회원가입 하러가기</a>  
+  </section>
+
+  <!-- 07 -->
+  <section class="hasmap-wrap">
+    <picture>
+      <source data-device="mobile" srcset="Promotions/2025/1001_bundle/mo_07_1.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="Promotions/2025/1001_bundle/pc_fp_07_1.jpg?$staticlink$" alt="REVIEW EVENT / 리뷰를 작성해주신 모든 분들께 100% 드리는 특별한 선물! 공식몰 포토 리뷰 작성 시 스타벅스 기프티콘 추첨 증정, 네이버 블로그 리뷰 추가 작성 시 100% NEDD 슬링백 증정!"/>
+    </picture>
+    <a href="$url('Search-Show','cgid','atev_25_reviewevent')$" class="review_btn">리뷰이벤트 자세히 보기</a>
+  </section>        
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer="defer"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- slider -->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    $('.hasmap-wrap .slider01 .owl-carousel').each(function(){
+      $(this).owlCarousel({
+          center: true,
+          items: 1,
+          loop: true,
+          nav: false,
+          dots: true,
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    // 이미지와 source 태그의 srcset 변환
+    const images = document.querySelectorAll('img');
+    const sources = document.querySelectorAll('source');
+
+    images.forEach((img) => {
+        if (img.src && img.src.includes('Promotions')) {
+            img.src = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + img.src.split('Promotions')[1];
+        }
+    });
+
+    sources.forEach((source) => {
+        // source의 data-device 속성 변환 (srcset)
+        if (source.srcset && source.srcset.includes('Promotions')) {
+            source.srcset = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + source.srcset.split('Promotions')[1];
+        }
+        
+        // data-device 속성도 수정 (필요한 경우)
+        if (source.dataset.device && source.dataset.device === 'mobile') {
+            // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+            source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+        }
+    });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+    if (path.includes('Promotions')) {
+        source.srcset = source.srcset.replace(path, 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + path.split('Promotions')[1]);
+    }
+});
+</script>
+
+</body>
+</html>
