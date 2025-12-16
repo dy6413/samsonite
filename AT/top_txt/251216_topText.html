@@ -1,0 +1,240 @@
+<style type="text/css">
+    .header-banner .carousel-promo-message {
+        min-height:35px;
+        max-height:80px;
+        font-family:Nanum Gothic;
+    }
+    .header-banner .carousel-promo-message .carousel-inner {
+        position:absolute;
+        width:65%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        margin:0 auto;
+    }
+    .header-banner .carousel-promo-message .carousel-inner .carousel-item a.as_top_text {
+        font-size: 1.05rem;
+    }
+    .carousel-item-next.carousel-item-left {
+        transform:translateX(100%);
+    }
+    .carousel-item-prev.carousel-item-right {
+        transform:translateX(-100%);
+    }
+    .carousel-inner .carousel-item a {
+        color:#fff;
+    }
+    .carousel.carousel-promo-message {
+        position:relative;
+        top:0;
+    }
+
+    @supports (transform-style: preserve-3d) {
+        .carousel-item-next.carousel-item-left {
+            transform:translate3d(100%, 0, 0);
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .carousel-inner .carousel-item a {
+            font-size:3.4vw;
+            margin:auto;
+            text-align:center;
+            vertical-align:middle;
+        }
+        .header-banner .carousel-promo-message .carousel-inner .carousel-item a.as_top_text {
+          font-size: 0.85rem;
+        }
+        .carousel-inner .carousel-item a span:first-child {
+            display:block;
+            width:100%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .header-banner.slide-up {
+            display:block !important;}
+
+        .header-banner.slide-up.hide {
+            display:none !important;
+        }
+    }
+    body.sticky-header .section-header .header-banner {
+        display:block !important;
+    }
+
+    #pdp-promotion-message-popup2 .modal-header {
+        border-bottom: none;
+    }
+
+    #pdp-promotion-message-popup .modal-body {
+        padding:15px;
+    }
+
+    #pdp-promotion-message-popup2 .modal-body {
+        padding:15px;
+        margin-top:-20px;
+    }
+
+    #pdp-promotion-message-popup .modal-body h3.pop_tit_h3,
+    #pdp-promotion-message-popup2 .modal-body h3.pop_tit_h3 {
+        text-align:center;
+        font-family: inherit;
+    }
+
+    #pdp-promotion-message-popup2 .modal-body h3.pop_tit_h3 .sub_b {
+        display: block;
+        font-weight: bolder;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #pdp-promotion-message-popup2 .modal-body h3.pop_tit_h3 b {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    #pdp-promotion-message-popup2 .modal-body h3.pop_tit_h3 p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    #pdp-promotion-message-popup .btn-close-popup,
+    #pdp-promotion-message-popup2 .btn-close-popup {
+        background:transparent;
+        border:0;
+        outline:none;
+        cursor:pointer;
+        display:block;
+        position:absolute;
+        top:5px;
+        right:5px;
+        z-index:1;
+    }
+
+    .underline {
+        display:inline !important;
+        text-decoration:underline;
+    }
+    </style>
+    <div class="carousel slide carousel-promo-message" data-ride="carousel" id="carouselPromotionMessage">
+    <div class="carousel-inner">
+
+    <div class="carousel-item active"><a href="$url('Search-Show','cgid','atev_2025_instagon')$"><span>INSTAGON 인스타곤</span></a></div>
+    
+    <div class="carousel-item"><a href="$url('Search-Show','cgid','atev_25_custombundle')$"><span>세트상품 기획전</span></a></div>
+    
+    <div class="carousel-item"><a href="$url('Search-Show','cgid','at_benefit_new_member')$"><span>신규가입 시 10% 쿠폰 즉시 지급!</span></a></div>
+    
+    <div class="carousel-item"><a class="referral-benefit" href="$url('Referral-Show')$">친구 추천하고 10% 쿠폰 받기</a></div>
+
+    <div class="carousel-item"><a class="as_top_text" data-target="#pdp-promotion-message-popup2" data-toggle="modal" href="#">[A/S 안내] 수선실 이전으로 인한 AS 접수 일시 중단 안내&nbsp; <span class="underline">더보기</span></a></div>
+  
+    <div class="carousel-item"><a href="$url('Search-Show','cgid','atev_25_reviewevent')$"><span>리뷰 이벤트 100% 선물 증정</span></a></div>
+    </div>
+    <a class="carousel-control carousel-control-prev" data-slide="prev" href="#carouselPromotionMessage" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> </a> <a class="carousel-control carousel-control-next" data-slide="next" href="#carouselPromotionMessage" role="button"> <span aria-hidden="true" class="carousel-control-next-icon"></span> </a></div>
+    
+
+    <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-backdrop="static"
+    data-keyboard="false" id="pdp-promotion-message-popup2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <style type="text/css">
+        .modal-content {
+          line-height: 160%;
+        }
+  
+        .as_list {
+          padding: 0;
+        }
+  
+        .as_list li {
+          text-align: center;
+          list-style: none;
+          margin-bottom: 1.5rem;
+        }
+  
+        .as_list li:last-child {
+          margin-bottom: 2.5rem;
+        }
+  
+        .as_caution {
+          background: #eceff1;
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 1.5rem;
+        }
+  
+        .as_caution dt {
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+  
+        .as_caution_list {
+          padding: 0;
+          font-size: 0.9rem;
+          word-break: break-word;
+        }
+  
+        .as_caution_list li {
+          position: relative;
+          padding-left: 20px;
+          text-indent: -20px;
+          list-style: none;
+        }
+  
+        .as_notice {
+          margin-bottom: 2.5rem;
+        }
+  
+        .as_notice p {
+          text-align: center;
+          margin-bottom: 0;
+        }
+      </style>
+      <div class="modal-content">
+        <div class="modal-header"><button aria-label="Close" class="btn-close-popup btn-close-prize" data-dismiss="modal"
+            type="button"><span aria-hidden="true">&times;</span></button></div>
+  
+        <div class="modal-body">
+          <h3 class="pop_tit_h3">
+            <img alt="" src="images/icons/pdp_americantourist_78x19_251216.png?$staticlink$" />
+            <br />
+            <br />
+            <b class="sub_b">[A/S 안내]</b>
+            <b>수선실 이전으로 인한<br />AS 접수 일시 중단 안내</b>
+            <p>12/15(월) ~ 12/21(일)</p>
+          </h3>
+          &nbsp;
+  
+          <ul class="as_list">
+            <li>안녕하세요. 쌤소나이트 코리아입니다.</li>
+            <li>고객님께 더 나은 서비스를 제공하기 위해 하드캐리어수선실 이전을<br />
+              진행함에 따라, A/S 접수가 일시적으로 중단될 예정이오니<br />
+              아래 내용을 참고하여 주시기 바랍니다.<br /></li>
+            <li>해당 기간 동안에는 매장 방문을 통한 A/S 접수가 불가하오니,<br />
+              이용에 불편이 없으시도록 일정 확인을 부탁드립니다.</li>
+          </ul>
+  
+          <dl class="as_caution">
+            <dt>&lt;수선 접수 일시 중단 일정&gt;</dt>
+            <dd>
+              <ul class="as_caution_list">
+                <li><b>A/S 접수 중단 제품 : </b>하드캐리어 (소프트캐리어(원단소재) 및 백팩, 서류가방은 접수가능)</li>
+                <li><b>A/S 접수 중단 기간 : </b>12/15(월) ~ 12/21(일)</li>
+                <li><b>A/S 접수 재개일 : </b>12/22(월)</li>
+              </ul>
+            </dd>
+          </dl>
+  
+          <div class="as_notice">
+            <p>A/S 접수 이용에 불편을 드려 대단히 죄송합니다.</p>
+            <p>더 나은 서비스로 보답하는 쌤소나이트 코리아가 되겠습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function () {
+        $("#pdp-promotion-message-popup2").appendTo("body");
+    });
+</script>
