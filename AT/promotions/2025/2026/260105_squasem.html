@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/newGlobal.css">
+  <link rel="stylesheet" href="../../css/newSearch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+  <style type="text/css">
+    body {
+      margin:0;
+    }
+    img {
+      display: block;
+    }
+  </style>
+<body>
+
+
+
+
+
+  <style type="text/css">
+  .conts-wrap {
+    position: relative;
+    width: 100%;
+    /* max-width: 860px; */
+    margin: 0 auto;
+  }
+  .conts-wrap .hasmap-wrap {
+    position: relative;
+    display: block;
+  }
+  .conts-wrap img {
+    width: 100%;
+  }
+  .conts-wrap .hasmap-wrap a {
+    display: block;
+    text-indent: -9999px;
+    font-size: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0);
+  }
+  .conts-wrap .hasmap-wrap [class^='link'] {
+    position: absolute;
+  }
+  .desktop-hidden {display: none !important;} 
+  .conts-wrap .video-wrap {position: relative;}
+  .conts-wrap .video iframe {position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;}
+
+  .conts-wrap .video-wrap {
+    position: absolute;
+    top: 2.55%;
+    left: 49.9%;
+    width: 57.29%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transform: translateX(-50%);
+    }
+
+  .conts-wrap .cont02 .link {
+    top:12.90%;
+    width:16.04%; 
+    height:26.41%;
+  }
+  .conts-wrap .cont02 .link01 {
+    left:54.27%;
+  }
+  .conts-wrap .cont02 .link02 {
+    left:72.65%;
+  }
+  
+  .conts-wrap .cont04 .link {
+    width:20.83%; 
+    height:13%;
+  }
+  .conts-wrap .cont04 .link01 {
+    left:66.19%; 
+    top:42.41%;
+  }
+  .conts-wrap .cont04 .link02 {
+    left:66.19%; 
+    top:58.50%;
+  }
+  .conts-wrap .cont04 .link03 {
+    left:66.19%; 
+    top:74.59%;
+  }
+
+  .conts-wrap .hasmap-wrap .join_btn {
+    position: absolute;
+    left: 22.92%;
+    top: 70%;
+    width: 11.98%;
+    height: 10.85%;
+  }
+  .conts-wrap .hasmap-wrap .kakao_btn {
+    position: absolute; 
+    left: 65.10%;
+    top: 70%;
+    width: 11.98%;
+    height: 10.85%;
+  }
+  .conts-wrap .hasmap-wrap .review_btn {
+    position: absolute;
+    left: 38.28%;
+    top: 79.27%;
+    width: 23.44%;
+    height: 10.34%;
+  }
+  
+    /* Swiper */
+  .conts-wrap .cont02Swiper {
+    position: absolute;
+    top: 48.94%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 3%;
+  }
+
+  .conts-wrap .cont02 .swiper-pagination {
+    top: 85.76%;
+    bottom: auto;
+  }
+
+  .conts-wrap .cont02Swiper .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+	}
+
+  .conts-wrap .cont02Swiper .swiper-slide {
+      background-color: white;
+      transition: transform 0.2s ease-in-out;
+      padding: 0.7%;
+      box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.44);
+			transform: scale(0.82) !important;
+      box-sizing: border-box;
+			z-index: 10;
+	}
+
+  .conts-wrap .cont02Swiper .swiper-slide img {
+    box-sizing: border-box;
+    border: min(calc((100vw / 1920) * 3), 3px) solid black;
+  }
+
+  .conts-wrap .cont02Swiper .swiper-slide-active {
+      padding: 0.8%;
+      margin: 0 1%;
+			transform: scale(1) !important;
+			z-index: 10;
+	}
+
+  .conts-wrap .cont02Swiper .swiper-slide-prev {
+      margin-left: -1.25%;
+	}
+
+  .conts-wrap .cont02Swiper .swiper-slide-next {
+      margin-right: -1.25%;
+	}
+
+    /* indicator */
+    .conts-wrap .swiper-pagination-bullet {
+        width: min(calc((100vw / 1920) * 20), 20px);
+        height: min(calc((100vw / 1920) * 20), 20px);
+        border: 2px solid rgba(0, 0, 0, .8);
+        background: transparent;
+        -webkit-backface-visibility: visible;
+        transition: opacity 0.2s ease;
+        border-radius: 50%;
+        opacity: 1 !important;
+    }
+    .conts-wrap .swiper-pagination-bullet-active {
+        background: rgba(0, 0, 0, .8);
+    }
+
+
+    @media screen and (max-width: 767px) {
+    .mobile-hidden {display: none !important;} 
+    .conts-wrap .cont02 .link {
+      top:22.49%;
+      width:37.09%;
+      height:22.49%;
+    }
+    .conts-wrap .cont02 .link01 {
+      left:10.46%;
+    }
+    .conts-wrap .cont02 .link02 {
+      left:52.45%;
+    }
+    .conts-wrap .video-wrap {
+      top: 2.6%;
+      left: 50.1%;
+      width: 88.45%;
+    }
+    .conts-wrap .cont04 .link {
+      width:29.77%; 
+      height:13.81%;
+    }
+    .conts-wrap .cont04 .link01 {
+      left:3.38%; 
+      top:78.16%;
+    }
+    .conts-wrap .cont04 .link02 {
+      left:35.56%; 
+      top:78.16%;
+    }
+    .conts-wrap .cont04 .link03 {
+      left:67.26%; 
+      top:78.16%;
+    }
+
+    .conts-wrap .cont02Swiper {
+      top: 56.45%;
+      padding-bottom: 5%;
+    }
+
+    .conts-wrap .cont02 .swiper-pagination {
+      top: 92%;
+    } 
+
+    .conts-wrap .cont02Swiper .swiper-slide {
+      padding: 1%;
+    }
+
+    .conts-wrap .cont02Swiper .swiper-slide-active {
+      padding: 1.3%;
+    }
+
+    .conts-wrap .cont02Swiper .swiper-slide img {
+      border: min(calc((100vw / 1243) * 5), 5px) solid black;
+    }
+
+    .conts-wrap .cont02Swiper .swiper-slide-active,
+    .conts-wrap .cont02Swiper .swiper-slide-prev,
+    .conts-wrap .cont02Swiper .swiper-slide-next {
+      margin: 0;
+    }
+
+    .conts-wrap .swiper-pagination-bullet {
+      width: min(calc((100vw / 1243) * 35), 35px);
+      height: min(calc((100vw / 1243) * 35), 35px);
+    }
+
+    .conts-wrap .hasmap-wrap .join_btn {
+      left: 8.75%;
+      top: 44.73%;
+      width: 35.94%;
+      height: 7.94%;
+    }
+    .conts-wrap .hasmap-wrap .kakao_btn {
+      left: 31.88%;
+      top: 81.21%;
+      width: 35.94%;
+      height: 7.94%;
+    }
+    .conts-wrap .hasmap-wrap .review_btn {
+      left:12.63%;
+      top:auto;
+      bottom: 5.3%;
+      width: 74.81%;
+      height:9.77%;
+    }
+  }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- web -->
+  <div class="conts-wrap">
+    <!-- 01 -->
+    <section class="hasmap-wrap cont01">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/0620_Squasem/mo_01.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/0620_Squasem/pc_01_1.jpg?$staticlink$" alt="AMERICAN TOURISTER ENTER THE WORLD OF SQUASEM"/>
+      </picture>   
+    </section>
+  
+    <!-- 02 -->
+    <section class="hasmap-wrap cont02">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/0620_Squasem/mo_02.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/0620_Squasem/pc_02_fp.jpg?$staticlink$" alt="NEW SQUASEM. 경량 PP 소재 캐리어, 새로운 컬러로 만나다!"/>
+      </picture>
+      <a class="link link01" href="$url('Product-Show','pid','at-156705-1661')$">NEW COLOR, PASTEL YELLOW</a>
+      <a class="link link02" href="$url('Product-Show','pid','at-156705-0513')$">NEW COLOR, GLACIAL BLUE</a>
+
+      <div class="swiper cont02Swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_1.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_2.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_3.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_4.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_5.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_6.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_7.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_8.jpg?$staticlink$" />
+          </div>
+          <div class="swiper-slide">
+            <img alt="" src="Promotions/2025/0620_Squasem/pc_02_9.jpg?$staticlink$" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+  
+    <!-- 03 -->
+    <section class="hasmap-wrap cont03">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/0620_Squasem/mo_03.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/0620_Squasem/pc_03_1.jpg?$staticlink$" alt="비디오 영역"/>
+      </picture> 
+      <div class="video-wrap">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/1071296242?h=f09a393271&amp;badge=0&amp;autopause=0&amp;app_id=58479&amp;muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1" style="position:absolute; left:0; top:0; width: 100%; height: 100%;" title="video player"></iframe>
+      </div>
+    </section>
+  
+    <!-- 04 -->
+    <section class="hasmap-wrap cont04">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/0620_Squasem/mo_04_2.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/0620_Squasem/pc_04_3.jpg?$staticlink$" alt="SALE SQUASEM SPECIAL PRICE 트래블러를 위한 특별 할인가! 30% OFF"/>
+      </picture>
+      <a class="link link01" href="$url('Product-Show','pid','at-145745-1627')$">기내용 55cm, 20인치 정가 169,000원, 할인가 118,000원</a>
+      <a class="link link02" href="$url('Product-Show','pid','at-156705-1627')$">중형 66cm, 24인치 정가 199,000원, 할인가 139,000원</a>
+      <a class="link link03" href="$url('Product-Show','pid','at-156706-1627')$">대형 75cm, 28인치 정가 239,000원, 할인가 167,000원</a>
+    </section>  
+  
+    <!-- 05 -->
+    <section class="hasmap-wrap cont05">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/2025/0620_Squasem/mo_05.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/2025/0620_Squasem/pc_05_1.jpg?$staticlink$" alt="REVIEW SQUASEM 리얼 후기. 리뷰 1. 완전 후회 없는 선택, 아메리칸 투어리스터. 그리고 스콰셈. : 일단 디자인부터 예술이에요. 고급스러운 무광 엠보싱 무늬가 실제로 보니까 더 예쁘네요. 긁힘 걱정도 덜하고, 오래오래 쓸 수 있을 것 같아요. Optimov 충격 흡수 기술이 적용되었다는데, 살펴보니 서스펜션 같은 구조처럼 보이더라구요! 디자인도 예쁘고 기능도 넘넘 좋아서, 주변 사람들한테도 스콰셈 요고 막 추천하고 있어요. 저부터도 작은 사이즈 하나 더 살까 해요... 역시 아메리칸 투어리스터는 믿고 쓰는 브랜드! / 리뷰 2. 실제로 보니 더 마음에 들어요 : 28인치이라 크기는 큰데 가볍고 소재도 튼튼해 보여요. 바퀴도 부드럽게 잘굴러가고 28인치 캐리어엔 확장 기능 있는건 잘 없던데, 이건 있어서 좋네요. 더블 지퍼 기능에 잠금장치까지 고급이고 이렇게 좋은 스펙이 가득인데 할인행사까지 해서 저렴하게 잘샀네요! 여행 잘 다녀올께요^^ / 리뷰 3. 여자라면 한번쯤 갖고 싶은 화이트 캐리어 : 제 로망을 이루어진 SQUASEM 화이트 캐리어★ - 가격 및 디자인 1. 크기 28인치에 비해서 합리적인 가격 2. 가격도 착한데 확장도 됩니다. 3. 다이아몬드 무늬에 무광에 가까운 재질로 고급스러움 UP..! 4. 색상 : 차가운 화이트 색상이 아닌 때가 덜 탈거 같은 따뜻한 느낌의 화이트 색상 - 내구성 손잡이가 견고한 편이고, 캐리어를 옆으로 내려놓을 때에 비해서 보조 받침대 추가 디자인~ TSA008 잠금장치도 잊지않고 장착! 플랫지퍼 손잡이로 저렴한 캐리어 느낌이 아니더라고요."/>
+      </picture>
+    </section> 
+      
+    <!-- 06 -->
+    <section class="hasmap-wrap cont06">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/00_footer/2507_coupon_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/00_footer/2601_coupon_pc.jpg?$staticlink$" alt="추가 할인, 신규 회원 전용 10% / 네이버 페이로 결제 시, 결제금액 기준 최대 2% 추가 적립 / 아메리칸 투어리스터 공식 계정 플친 전용 5,000원 쿠폰"/>
+      </picture>
+      <a class="join_btn" href="https://www.americantourister.co.kr/register">회원가입 하러가기</a>  
+      <a class="kakao_btn" href="http://pf.kakao.com/_NzvkK/friend" id="kakao-add-channel-button" target="_blank" title="새 창">카카오 플러스 채널추가</a>
+    </section>  
+  
+    <!-- 공통배너 -->
+    <section class="hasmap-wrap">
+      <picture>
+        <source data-device="mobile" srcset="Promotions/00_footer/2601_footer_mo.jpg?$staticlink$" media="(max-width: 767px)" >
+        <img src="Promotions/00_footer/2512_footer_fp_pc.jpg?$staticlink$" alt="REVIEW EVENT / 리뷰를 작성해주신 모든 분들께 100% 드리는 특별한 선물! 공식몰 포토 리뷰 작성 시 스타벅스 기프티콘 추첨 증정, 네이버 블로그 리뷰 추가 작성 시 100% NEDD 슬링백 증정!"/>
+      </picture>
+      <a href="$url('Search-Show','cgid','atev_25_reviewevent')$" class="review_btn">리뷰이벤트 자세히 보기</a>
+    </section>    
+  </div>
+
+<!-- slider -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", () => {
+			const swiper = new Swiper(".conts-wrap .cont02Swiper", {
+					slidesPerView: 3,
+					spaceBetween: 15,
+					centeredSlides: true,
+					loop: true,
+					pagination: {
+							el: ".cont02 .swiper-pagination",
+							clickable: true,
+					},
+					breakpoints: {
+							0: {
+									slidesPerView: 1.5,
+									spaceBetween: 0,
+							},
+							768: {
+									slidesPerView: 4.3,
+									spaceBetween: 0,
+							},
+					},
+			});
+	})
+</script>
+
+
+
+
+
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+  // 이미지와 source 태그의 srcset 변환
+  const images = document.querySelectorAll('img');
+  const sources = document.querySelectorAll('source');
+
+  images.forEach((img) => {
+      if (img.src && img.src.includes('Promotions')) {
+          img.src = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + img.src.split('Promotions')[1];
+      }
+  });
+
+  sources.forEach((source) => {
+      // source의 data-device 속성 변환 (srcset)
+      if (source.srcset && source.srcset.includes('Promotions')) {
+          source.srcset = 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + source.srcset.split('Promotions')[1];
+      }
+      
+      // data-device 속성도 수정 (필요한 경우)
+      if (source.dataset.device && source.dataset.device === 'mobile') {
+          // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+          source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+      }
+  });
+});
+
+
+source.srcset.split(',').forEach((path, index) => {
+  if (path.includes('Promotions')) {
+      source.srcset = source.srcset.replace(path, 'https://atkr.stg.samsonite-asia.com/on/demandware.static/-/Sites-AmericanTouristerKR-Library/ko_KR/dwa0e9db55/Promotions/' + path.split('Promotions')[1]);
+  }
+});
+</script>
+</body>
+</html>
