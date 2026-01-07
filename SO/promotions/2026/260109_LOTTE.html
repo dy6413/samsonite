@@ -1,0 +1,56 @@
+<style type="text/css">
+  .contents_wrap{
+      position: relative;
+      width: 100%;
+      max-width: 1310px;
+      margin: 0 auto;        
+  }
+  .contents_wrap img{width:100%; display:block;}
+</style>
+
+<div class="contents_wrap">
+  <picture>
+      <source data-device="mobile" srcset="images/promotion/2026/0109_lotte/SAMSONITE_LOTTE_MO.jpg?$staticlink$" media="(max-width: 767px)" >
+      <img src="images/promotion/2026/0109_lotte/SAMSONITE_LOTTE_PC.jpg?$staticlink$" alt="쌤소나이트 서울 롯데 본점 GRAND OPENING 2026.01.09 Samsonite Seoul, B1, Lotte Myeongdong Main. 한국의 전통과 미(美)를 현대적 감각으로 재해석한 '쌤소나이트 서울'을 롯데 본점에서 만나보세요. &lt;오픈 & 행사기간>&gt; 2026.01.09(금) ~ 01.22(목) 기간한정 오픈 프로모션 - ① 매일 선착순 50명(1/9~1/11) '큐브-048' 30인치 캐리어 5만원 특가 ② 캐리어 반값 할인(1/9~1/22) '트루프레임' 실버•화이트 캐리어 롯데 본점 단독 50% 할인 ③ 매장 구매 고객 한정(1/9~1/22) 자개 키링•텀블러 등 사은품 증정 ④ 'A Message from Seoul' 엽서 캐리어 증정 이벤트(1/9~1/22) 매장에서 엽서를 보낸 고객 한정 매일 2인 '리클래식' 캐리어 31인치 레드 증정(당일 오후 6시 추첨) ⑤ SNS•채널 참여 고객 한정(1/9~1/22) 카카오 플러스친구 추가 or 인스타그램 업로드 or 구글•네이버 지도 리뷰 작성 시 쌤소나이트 굿즈(펜, 스티커) 증정. A Message from Seoul 엽서 캐리어 증정 이벤트 참여 방법 ① 마음에 드는 김경희 작가의 쌤소나이트 엽서 선택하기 ② 엽서 작성 후 매장 내 우편함에 넣기(국내외 배송 무료) ③ '이벤트 경품 추첨 응모권' 서명 후 응모하기 *유의사항 : 이벤트 참여 시 경품 지급 안내를 위해 이름 및 연락처가 수집되며, 당첨자에 한해 추가 개인정보를 요청할 수 있습니다. 개인정보는 관련 법령에 따라 처리되며, 동의하지 않을 경우 경품 지급이 제한될 수 있습니다."/>
+  </picture>   
+</div>
+
+
+
+
+
+
+<!-- 이미지 주소 변환 -->
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      // 이미지와 source 태그의 srcset 변환
+      const images = document.querySelectorAll('img');
+      const sources = document.querySelectorAll('source');
+  
+      images.forEach((img) => {
+          if (img.src && img.src.includes('images/promotion')) {
+              img.src = 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dw0ba17184/images/promotion/' + img.src.split('images/promotion')[1];
+          }
+      });
+  
+      sources.forEach((source) => {
+          // source의 data-device 속성 변환 (srcset)
+          if (source.srcset && source.srcset.includes('images/promotion')) {
+              source.srcset = 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dw0ba17184/images/promotion/' + source.srcset.split('images/promotion')[1];
+          }
+          
+          // data-device 속성도 수정 (필요한 경우)
+          if (source.dataset.device && source.dataset.device === 'mobile') {
+              // 여기에서 특정 조건에 따라 다른 변환도 추가할 수 있음
+              source.dataset.device = 'mobile-updated';  // 예시: data-device 수정
+          }
+      });
+  });
+  
+  
+  source.srcset.split(',').forEach((path, index) => {
+      if (path.includes('images/promotion')) {
+          source.srcset = source.srcset.replace(path, 'https://sskr.stg.samsonite-asia.com/on/demandware.static/-/Sites-MonoSamsoniteKR-Library/ko_KR/dw0ba17184/images/promotion/' + path.split('images/promotion')[1]);
+      }
+  });
+  </script>
